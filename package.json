@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-catalyst-core",
-  "description": "Gatsby Starter: A basic implementation of Gatsby-Theme-Catalyst-Core",
+  "name": "gatsby-starter-catalyst-writer",
+  "description": "Gatsby Starter: A basic implementation of Gatsby-Theme-Catalyst-Writer",
   "version": "0.2.0",
   "author": "Eric Howey <eric@erichowey.dev>",
   "dependencies": {
