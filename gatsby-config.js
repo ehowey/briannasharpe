@@ -25,14 +25,14 @@ module.exports = {
         location: `footer` //Options are "all", "header", "footer"
       },
       {
-        name: `Github`,
-        url: `https://www.github.com/ehowey`,
+        name: `Twitter`,
+        url: `https://www.twitter.com/erchwy`,
         location: `all` //Options are "all", "header", "footer"
       },
       {
-        name: `Twitter`,
-        url: `https://www.twitter.com/erchwy`,
-        location: `header` //Options are "all", "header", "footer"
+        name: `Instagram`,
+        url: `#`,
+        location: `footer` //Options are "all", "header", "footer"
       }
     ]
   },

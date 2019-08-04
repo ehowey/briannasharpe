@@ -2,6 +2,7 @@ import merge from "deepmerge";
 import { baseTheme } from "gatsby-theme-catalyst-core";
 import "typeface-homemade-apple";
 import "typeface-playfair-display";
+import "typeface-Montserrat";
 
 export default merge(baseTheme, {
   colors: {
@@ -32,10 +33,11 @@ export default merge(baseTheme, {
   },
   fonts: {
     text:
-      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-    heading: '"Playfair Display", serif',
+      'Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+    heading: "inherit",
     monospace: "Menlo, monospace",
-    alt: '"Homemade Apple", cursive'
+    alt: '"Homemade Apple", cursive',
+    menu: '"Playfair Display", sans-serif'
   },
   // sizes: {
   //   maxContentWidth: "720px", // Sets the container size on larger screens, e.g. tablets and laptops
