@@ -7,7 +7,9 @@
     "gatsby": "^2.13.45",
     "gatsby-theme-catalyst-writer": "^0.0.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "typeface-homemade-apple": "^0.0.72",
+    "typeface-playfair-display": "^0.0.72"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

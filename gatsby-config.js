@@ -37,7 +37,7 @@ module.exports = {
     ]
   },
   plugins: [
-    `gatsby-theme-catalyst-core`,
+    `gatsby-theme-catalyst-writer`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
