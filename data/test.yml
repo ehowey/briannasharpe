@@ -1,0 +1,19 @@
+workList:
+  - category: Health
+    date: 192019-08-01
+    featured: true
+    publication: New York Times
+    title: Title One
+    url: '#'
+  - category: Health
+    date: 192019-07-02
+    featured: true
+    publication: False News
+    title: Title two
+    url: '#'
+  - category: News
+    date: 192019-06-03
+    featured: false
+    publication: The Best News
+    title: Title 3
+    url: '#'
