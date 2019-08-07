@@ -1,0 +1,30 @@
+- title: Interesting Article
+  publication: Mainstreet News
+  date: 2019-08-22
+  url: https://www.reactrally.com/
+  category: Health
+  featured: true
+- title: Article on Stuff
+  publication: Radical Reel
+  date: 2019-09-22
+  url: https://www.reactrally.com/
+  category: Action
+  featured: true
+- title: Top 5 Something
+  publication: Pop Culture
+  date: 2019-10-22
+  url: https://www.reactrally.com/
+  category: Health
+  featured: true
+- title: Bob is my friend and this is a really long title
+  publication: New News
+  date: 2019-06-22
+  url: https://www.reactrally.com/
+  category: Health
+  featured: false
+- title: Ninja Stars Forever
+  publication: Dub Step Stamina
+  date: 2019-03-22
+  url: https://www.reactrally.com/
+  category: Action
+  featured: false
