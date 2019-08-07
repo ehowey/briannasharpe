@@ -11,3 +11,7 @@ workList:
     publication: Publication 3
     title: Title 3
     url: www.link4.com
+  - date: 2019-06-04T18:54:02.657Z
+    publication: New York Times
+    title: The last title
+    url: www.nytimes.com
