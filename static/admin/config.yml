@@ -4,12 +4,19 @@ backend:
 media_folder: static/assets/images
 public_folder: assets
 collections:
-  - label: Published Work
-    name: published
-    widget: list
-    file: data/test.yml
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Publication, name: publication, widget: string }
-      - { label: Published Date, name: date, widget: date }
-      - { Label: URL, name: url, widget: string }
+  - name: "publishedwork"
+    label: "Published Work"
+    description: "List of all published work"
+    files:
+      - label: "List of Published Work"
+        name: "work"
+        file: "data/test.yml"
+        fields:
+          - label: "Published Work List"
+            name: "workList"
+            widget: "list"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Publication, name: publication, widget: string }
+              - { label: Published Date, name: date, widget: date }
+              - { Label: URL, name: url, widget: string }
