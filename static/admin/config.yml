@@ -11,24 +11,21 @@ collections:
       - label: "List of Published Work"
         name: "work"
         file: "data/test.yml"
+        widget: "list"
         fields:
-          - label: "Published Work List"
-            name: "workList"
-            widget: "list"
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Publication, name: publication, widget: string }
-              - {
-                  label: Published Date,
-                  name: date,
-                  widget: date,
-                  format: "YYYY-MM-DD",
-                }
-              - { Label: URL, name: url, widget: string }
-              - { Label: Category, name: category, widget: string }
-              - {
-                  Label: Featured?,
-                  name: featured,
-                  widget: boolean,
-                  default: false,
-                }
+          - { label: Title, name: title, widget: string }
+          - { label: Publication, name: publication, widget: string }
+          - {
+              label: Published Date,
+              name: date,
+              widget: date,
+              format: "YYYY-MM-DD",
+            }
+          - { Label: URL, name: url, widget: string }
+          - { Label: Category, name: category, widget: string }
+          - {
+              Label: Featured?,
+              name: featured,
+              widget: boolean,
+              default: false,
+            }
