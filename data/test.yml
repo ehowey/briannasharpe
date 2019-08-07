@@ -3,3 +3,7 @@ workList:
     publication: The first publication
     title: The first title
     url: www.great.com
+  - date: 2019-08-07T18:51:19.917Z
+    publication: Publication 2
+    title: Title 2
+    url: www.link2.com
