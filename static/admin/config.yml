@@ -2,30 +2,28 @@ backend:
   name: github
   repo: ehowey/gatsby-starter-catalyst-writer
 media_folder: static/assets/images
-public_folder: assets
+public_folder: static
 collections:
-  - name: "publishedwork"
-    label: "Published Work"
-    description: "List of all published work"
-    files:
-      - label: "List of Published Work"
-        name: "work"
-        file: "data/test.yml"
-        widget: "list"
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Publication, name: publication, widget: string }
-          - {
-              label: Published Date,
-              name: date,
-              widget: date,
-              format: "YYYY-MM-DD",
-            }
-          - { Label: URL, name: url, widget: string }
-          - { Label: Category, name: category, widget: string }
-          - {
-              Label: Featured?,
-              name: featured,
-              widget: boolean,
-              default: false,
-            }
+  - name: work
+    label: Published Work
+    folder: work
+    identifier_field: title
+    extension: yml
+    create: true
+      fields:
+        - { label: Title, name: title, widget: string }
+        - { label: Publication, name: publication, widget: string }
+        - {
+            label: Published Date,
+            name: date,
+            widget: date,
+            format: "YYYY-MM-DD",
+          }
+        - { Label: URL, name: url, widget: string }
+        - { Label: Category, name: category, widget: string }
+        - {
+            Label: Featured?,
+            name: featured,
+            widget: boolean,
+            default: false,
+          }
