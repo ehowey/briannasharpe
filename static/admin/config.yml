@@ -22,7 +22,7 @@ collections:
                   label: Published Date,
                   name: date,
                   widget: date,
-                  format: "YYY-MM-DD",
+                  format: "YYYY-MM-DD",
                 }
               - { Label: URL, name: url, widget: string }
               - { Label: Category, name: category, widget: string }
