@@ -2,7 +2,7 @@ import merge from "deepmerge";
 import { baseTheme } from "gatsby-theme-catalyst-core";
 import "typeface-homemade-apple";
 import "typeface-playfair-display";
-import "typeface-Montserrat";
+import "typeface-montserrat";
 
 export default merge(baseTheme, {
   colors: {
