@@ -1,15 +1,15 @@
 backend:
   name: github
   repo: ehowey/gatsby-starter-catalyst-writer
-media_folder: static/assets
+media_folder: static/assets/images
 public_folder: assets
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
-    create: true
+  - label: Published Work
+    name: published
+    widget: list
+    file: data/test.yml
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { label: Title, name: title, widget: string }
+      - { label: Publication, name: publication, widget: string }
+      - { label: Published Date, name: date, widget: date }
+      - { Label: URL, name: url, widget: string }
