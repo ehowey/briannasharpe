@@ -6,7 +6,7 @@
   "dependencies": {
     "gatsby": "^2.13.52",
     "gatsby-theme-catalyst-writer": "^0.0.14",
-    "react": "^16.8.6",
+    "react": "^16.9.0",
     "react-dom": "^16.8.6",
     "typeface-homemade-apple": "^0.0.72",
     "typeface-montserrat": "^0.0.75",
