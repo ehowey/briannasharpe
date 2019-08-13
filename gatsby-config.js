@@ -4,6 +4,8 @@ module.exports = {
     description: `Extends the base Catalyst Core theme to create a starter for freelance writers`,
     author: `Eric Howey`,
     siteUrl: `https://gatsby-starter-catalyst-writer.netlify.com`, //Change to you site address, required for sitemap.xml and robots.txt file
+    writingCategory1: `Health`,
+    writingCategory2: `News`,
     menuLinks: [
       {
         name: `Published Work`,
