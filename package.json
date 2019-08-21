@@ -4,7 +4,7 @@
   "version": "0.0.14",
   "author": "Eric Howey <eric@erichowey.dev>",
   "dependencies": {
-    "gatsby": "^2.13.52",
+    "gatsby": "^2.13.73",
     "gatsby-theme-catalyst-writer": "^0.0.14",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
