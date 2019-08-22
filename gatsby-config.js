@@ -39,7 +39,8 @@ module.exports = {
     ]
   },
   plugins: [
-    `gatsby-theme-catalyst-writer`,
+    `gatsby-theme-catalyst-core`,
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-sanity`,
       options: {
