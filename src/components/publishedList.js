@@ -7,33 +7,42 @@ const publishedList = () => {
     query {
       allSanityPublishedWork {
         nodes {
-          id
           title
+          category
+          id
           publishedBy
           publishedDate
-          link
         }
+        distinct(field: category)
       }
     }
   `);
   const writing = data.allSanityPublishedWork.nodes;
-  return (
-    <ul>
-      {writing.map(published => (
-        <li key={published.id}>
-          <a href={published.link} target="_blank" rel="noopener noreferrer">
-            <h3>{published.title}</h3>
-          </a>
-          {new Date(published.publishedDate).toLocaleDateString("en-US", {
-            month: "long",
-            day: "numeric",
-            year: "numeric"
-          })}{" "}
-          in {published.publishedBy}
-        </li>
-      ))}
-    </ul>
-  );
+  const cats = data.allSanityPublishedWork.distinct;
+  return cats.map(cat => (
+    <div>
+      <h3>{cat}</h3>
+      {writing
+        .filter(pub => pub.category === cat)
+        .map(pub => (
+          <p>{pub.title}</p>
+        ))}
+    </div>
+  ));
 };
 
 export default publishedList;
+
+// {writing.map(published => (
+//   <li key={published.id}>
+//     <a href={published.link} target="_blank" rel="noopener noreferrer">
+//       <h3>{published.title}</h3>
+//     </a>
+//     {new Date(published.publishedDate).toLocaleDateString("en-US", {
+//       month: "long",
+//       day: "numeric",
+//       year: "numeric"
+//     })}{" "}
+//     in {published.publishedBy}
+//   </li>
+// ))}
