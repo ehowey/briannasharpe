@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 const publishedList = () => {
@@ -8,26 +9,29 @@ const publishedList = () => {
       allSanityPublishedWork {
         nodes {
           title
-          category
-          id
-          publishedBy
-          publishedDate
+          categories {
+            title
+          }
         }
-        distinct(field: category)
+        distinct(field: categories___title)
       }
     }
   `);
   const writing = data.allSanityPublishedWork.nodes;
   const cats = data.allSanityPublishedWork.distinct;
   return cats.map(cat => (
-    <div>
+    <>
       <h3>{cat}</h3>
-      {writing
-        .filter(pub => pub.category === cat)
-        .map(pub => (
-          <p>{pub.title}</p>
-        ))}
-    </div>
+      {writing.map(pub => (
+        <>
+          {pub.categories
+            .filter(categ => categ.title === cat)
+            .map(categ => (
+              <p>{pub.title}</p>
+            ))}
+        </>
+      ))}
+    </>
   ));
 };
 
