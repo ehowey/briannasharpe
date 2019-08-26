@@ -10,6 +10,10 @@ const publishedList = () => {
       allSanityPublishedWork {
         nodes {
           title
+          id
+          link
+          publisher
+          date
           categories {
             title
           }

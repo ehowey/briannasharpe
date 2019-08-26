@@ -10,8 +10,8 @@ const featuredList = () => {
           title
           id
           link
-          publishedBy
-          publishedDate
+          publisher
+          date
         }
       }
     }
