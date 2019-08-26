@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
+// eslint-disable-next-line
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -18,16 +19,19 @@ const publishedList = () => {
     }
   `);
   const writing = data.allSanityPublishedWork.nodes;
-  const cats = data.allSanityPublishedWork.distinct;
-  return cats.map(cat => (
+  const uniqueCategories = data.allSanityPublishedWork.distinct;
+  return uniqueCategories.map(uniqueCategoryTitle => (
     <>
-      <h3>{cat}</h3>
-      {writing.map(pub => (
+      <h3>{uniqueCategoryTitle}</h3>
+      {writing.map(published => (
         <>
-          {pub.categories
-            .filter(categ => categ.title === cat)
-            .map(categ => (
-              <p>{pub.title}</p>
+          {published.categories
+            .filter(
+              articleCategories =>
+                articleCategories.title === uniqueCategoryTitle
+            )
+            .map(x => (
+              <p>{published.title}</p>
             ))}
         </>
       ))}

@@ -5,28 +5,23 @@ import { useStaticQuery, graphql } from "gatsby";
 const featuredList = () => {
   const data = useStaticQuery(graphql`
     query {
-      allSanityCategory {
+      allSanityPublishedWork(filter: { featured: { eq: true } }) {
         nodes {
           title
-          children {
-            ... on SanityPublishedWork {
-              id
-              link
-              publishedBy
-              publishedDate
-              title
-            }
-          }
+          id
+          link
+          publishedBy
+          publishedDate
         }
       }
     }
   `);
-  const writing = data.allSanityCategory.nodes;
+  const writing = data.allSanityPublishedWork.nodes;
   return (
     <ul>
       {writing.map(published => (
-        <li key={published.children.id}>
-          <h3>{published.children}</h3>
+        <li key={published.id}>
+          <p>{published.title}</p>
         </li>
       ))}
     </ul>
