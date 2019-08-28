@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import { useStaticQuery, graphql } from "gatsby";
 
-const featuredList = () => {
+const FeaturedList = () => {
   const data = useStaticQuery(graphql`
     query {
       allSanityPublishedWork(filter: { featured: { eq: true } }) {
@@ -28,4 +28,4 @@ const featuredList = () => {
   );
 };
 
-export default featuredList;
+export default FeaturedList;

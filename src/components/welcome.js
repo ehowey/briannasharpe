@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import { ButtonInternal } from "gatsby-theme-catalyst-core";
 
-const siteWelcome = props => {
+const SiteWelcome = props => {
   return (
     <div
       sx={{
@@ -25,4 +25,4 @@ const siteWelcome = props => {
   );
 };
 
-export default siteWelcome;
+export default SiteWelcome;

@@ -39,7 +39,12 @@ module.exports = {
     ]
   },
   plugins: [
-    `gatsby-theme-catalyst-core`,
+    {
+      resolve: `gatsby-theme-catalyst-core`,
+      options: {
+        displaySiteLogo: false
+      }
+    },
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-sanity`,

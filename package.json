@@ -4,12 +4,12 @@
   "version": "0.0.14",
   "author": "Eric Howey <eric@erichowey.dev>",
   "dependencies": {
-    "gatsby": "^2.13.52",
+    "gatsby": "^2.14.0",
     "gatsby-source-sanity": "^5.0.2",
-    "gatsby-theme-catalyst-core": "^0.2.6",
-    "gatsby-transformer-yaml": "^2.2.6",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "gatsby-theme-catalyst-core": "^0.3.0",
+    "gatsby-transformer-yaml": "^2.2.7",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "typeface-homemade-apple": "^0.0.72",
     "typeface-montserrat": "^0.0.75",
     "typeface-playfair-display": "^0.0.72"

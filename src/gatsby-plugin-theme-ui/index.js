@@ -36,9 +36,9 @@ export default merge(baseTheme, {
       'Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     heading: "inherit",
     monospace: "Menlo, monospace",
-    alt: '"Homemade Apple", cursive',
-    menu: '"Playfair Display", sans-serif'
-  },
+    siteTitle: '"Homemade Apple", cursive',
+    navLinks: '"Playfair Display", sans-serif'
+  }
   // sizes: {
   //   maxContentWidth: "720px", // Sets the container size on larger screens, e.g. tablets and laptops
   //   contentWidth: "90vw", // Sets the container width on smaller screens, results in a 5vw margin on the left and right
@@ -55,9 +55,6 @@ export default merge(baseTheme, {
   //   iconsHeader: "1.25rem", // Sets the icons size for the header
   // },
   // breakpoints: ["48em", "64em"],
-  catalystOptions: {
-    displaySiteLogo: "none" //Default is "block", set to "none" to remove logo
-  }
   // styles: {
   //   root: {
   //     fontFamily: "body",

@@ -4,7 +4,7 @@ import { jsx } from "theme-ui";
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-const publishedList = () => {
+const PublishedList = () => {
   const data = useStaticQuery(graphql`
     query {
       allSanityPublishedWork {
@@ -43,7 +43,7 @@ const publishedList = () => {
   ));
 };
 
-export default publishedList;
+export default PublishedList;
 
 // {writing.map(published => (
 //   <li key={published.id}>
