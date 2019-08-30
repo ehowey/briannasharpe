@@ -1,11 +1,11 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: `Writer Name`,
     description: `Extends the base Catalyst Core theme to create a starter for freelance writers`,
     author: `Eric Howey`,
     siteUrl: `https://gatsby-starter-catalyst-writer.netlify.com`, //Change to you site address, required for sitemap.xml and robots.txt file
-    writingCategory1: `Health`,
-    writingCategory2: `News`,
     menuLinks: [
       {
         name: `Published Work`,
@@ -39,7 +39,21 @@ module.exports = {
     ]
   },
   plugins: [
-    `gatsby-theme-catalyst-writer`,
+    {
+      resolve: `gatsby-theme-catalyst-core`,
+      options: {
+        displaySiteLogo: false
+      }
+    },
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: process.env.SANITY_PROJECT_ID,
+        dataset: process.env.SANITY_DATASET,
+        token: process.env.SANITY_TOKEN
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
