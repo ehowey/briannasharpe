@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
-import { useStaticQuery, graphql } from "gatsby";
+import { jsx } from "theme-ui"
+import { useStaticQuery, graphql } from "gatsby"
 
 const FeaturedList = () => {
   const data = useStaticQuery(graphql`
@@ -15,17 +15,28 @@ const FeaturedList = () => {
         }
       }
     }
-  `);
-  const writing = data.allSanityPublishedWork.nodes;
+  `)
+  const writing = data.allSanityPublishedWork.nodes
   return (
-    <ul>
+    <div
+      sx={{
+        display: "flex",
+      }}
+    >
       {writing.map(published => (
-        <li key={published.id}>
-          <p>{published.title}</p>
-        </li>
+        <div
+          sx={{
+            backgroundColor: "#cccccc",
+            padding: 2,
+          }}
+          key={published.id}
+        >
+          <h4>{published.title}</h4>
+          <p>{published.date}</p>
+        </div>
       ))}
-    </ul>
-  );
-};
+    </div>
+  )
+}
 
-export default FeaturedList;
+export default FeaturedList

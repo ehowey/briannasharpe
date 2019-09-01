@@ -2,7 +2,7 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Writer Name`,
+    title: `Brianna Sharpe`,
     description: `Extends the base Catalyst Core theme to create a starter for freelance writers`,
     author: `Eric Howey`,
     siteUrl: `https://gatsby-starter-catalyst-writer.netlify.com`, //Change to you site address, required for sitemap.xml and robots.txt file

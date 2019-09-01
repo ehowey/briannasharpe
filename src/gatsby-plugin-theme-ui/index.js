@@ -14,7 +14,7 @@ export default merge(BaseTheme, {
     //   background: "#ffffff",
 
     header: {
-      background: "#ffffff",
+      background: "transparent",
       backgroundOpen: "#333333",
       text: "#333333",
       textOpen: "#ffffff",
@@ -39,8 +39,9 @@ export default merge(BaseTheme, {
     navLinks: '"Playfair Display", sans-serif',
     alt: '"Playfair Display", sans-serif',
   },
+  // spaces: ["0rem", "0.5rem", "1rem", "1.5rem", "2rem", "2.5rem", "3rem"],
   sizes: {
-    maxContentWidth: "100%", // Sets the container size on larger screens, e.g. tablets and laptops
+    maxContentWidth: "720px", // Sets the container size on larger screens, e.g. tablets and laptops
     //   contentWidth: "90vw", // Sets the container width on smaller screens, results in a 5vw margin on the left and right
     //   headerHeight: "60px", // Sets the height of the header on screens before the first breakpoint, 767px and below by default
     //   headerHeightTablet: "80px", // Sets the height of the header after the first breakpoint, 768px to 1023px by default
@@ -48,9 +49,9 @@ export default merge(BaseTheme, {
     //   logoWidth: "50px", // Logo width on small screens, height is auto
     //   logoWidthTablet: "60px", // Logo width on medium screens, height is auto
     //   logoWidthLaptop: "60px", // Logo width on large screens, height is auto
-    //   mainMarginTop: "2rem", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
-    //   mainMarginTopTablet: "2rem", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
-    //   mainMarginTopLaptop: "2rem", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
+    mainMarginTop: "0", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
+    mainMarginTopTablet: "0", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
+    mainMarginTopLaptop: "0", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
     //   iconsFooter: "2rem", // Sets the icons size for the footer
     //   iconsHeader: "1.25rem", // Sets the icons size for the header
   },
