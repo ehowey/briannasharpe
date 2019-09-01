@@ -2,7 +2,6 @@ import merge from "deepmerge"
 import { BaseTheme } from "gatsby-theme-catalyst-core"
 import "typeface-homemade-apple"
 import "typeface-playfair-display"
-import "typeface-montserrat"
 
 export default merge(BaseTheme, {
   colors: {
@@ -33,27 +32,28 @@ export default merge(BaseTheme, {
   },
   fonts: {
     text:
-      'Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-    heading: "inherit",
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+    heading: '"Playfair Display", sans-serif',
     monospace: "Menlo, monospace",
     siteTitle: '"Homemade Apple", cursive',
     navLinks: '"Playfair Display", sans-serif',
+    alt: '"Playfair Display", sans-serif',
   },
-  // sizes: {
-  //   maxContentWidth: "720px", // Sets the container size on larger screens, e.g. tablets and laptops
-  //   contentWidth: "90vw", // Sets the container width on smaller screens, results in a 5vw margin on the left and right
-  //   headerHeight: "60px", // Sets the height of the header on screens before the first breakpoint, 767px and below by default
-  //   headerHeightTablet: "80px", // Sets the height of the header after the first breakpoint, 768px to 1023px by default
-  //   headerHeightLaptop: "80px", // Sets the height of the header after the second breakpoint, 1024px and up by default
-  //   logoWidth: "50px", // Logo width on small screens, height is auto
-  //   logoWidthTablet: "60px", // Logo width on medium screens, height is auto
-  //   logoWidthLaptop: "60px", // Logo width on large screens, height is auto
-  //   mainMarginTop: "2rem", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
-  //   mainMarginTopTablet: "2rem", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
-  //   mainMarginTopLaptop: "2rem", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
-  //   iconsFooter: "2rem", // Sets the icons size for the footer
-  //   iconsHeader: "1.25rem", // Sets the icons size for the header
-  // },
+  sizes: {
+    maxContentWidth: "100%", // Sets the container size on larger screens, e.g. tablets and laptops
+    //   contentWidth: "90vw", // Sets the container width on smaller screens, results in a 5vw margin on the left and right
+    //   headerHeight: "60px", // Sets the height of the header on screens before the first breakpoint, 767px and below by default
+    //   headerHeightTablet: "80px", // Sets the height of the header after the first breakpoint, 768px to 1023px by default
+    //   headerHeightLaptop: "80px", // Sets the height of the header after the second breakpoint, 1024px and up by default
+    //   logoWidth: "50px", // Logo width on small screens, height is auto
+    //   logoWidthTablet: "60px", // Logo width on medium screens, height is auto
+    //   logoWidthLaptop: "60px", // Logo width on large screens, height is auto
+    //   mainMarginTop: "2rem", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
+    //   mainMarginTopTablet: "2rem", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
+    //   mainMarginTopLaptop: "2rem", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
+    //   iconsFooter: "2rem", // Sets the icons size for the footer
+    //   iconsHeader: "1.25rem", // Sets the icons size for the header
+  },
   // breakpoints: ["48em", "64em"],
   // styles: {
   //   root: {
