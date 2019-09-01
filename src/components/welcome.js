@@ -67,7 +67,7 @@ const SiteWelcome = props => {
         >
           {props.subtitle}
         </h2>
-        <ButtonInternal to="/published-work" text="Published Work" />
+        <ButtonInternal to="/page-2" text="Published Work" variant="primary" />
       </div>
 
       <Img
