@@ -1,10 +1,10 @@
-import merge from "deepmerge";
-import { baseTheme } from "gatsby-theme-catalyst-core";
-import "typeface-homemade-apple";
-import "typeface-playfair-display";
-import "typeface-montserrat";
+import merge from "deepmerge"
+import { BaseTheme } from "gatsby-theme-catalyst-core"
+import "typeface-homemade-apple"
+import "typeface-playfair-display"
+import "typeface-montserrat"
 
-export default merge(baseTheme, {
+export default merge(BaseTheme, {
   colors: {
     //   primary: "#3273dc",
     //   secondary: "#0c66a1",
@@ -21,8 +21,8 @@ export default merge(baseTheme, {
       textOpen: "#ffffff",
       icons: "#333333",
       iconsHover: "#3273dc",
-      iconsOpen: "#ffffff"
-    }
+      iconsOpen: "#ffffff",
+    },
 
     //   footer: {
     //     background: "#333333",
@@ -37,8 +37,8 @@ export default merge(baseTheme, {
     heading: "inherit",
     monospace: "Menlo, monospace",
     siteTitle: '"Homemade Apple", cursive',
-    navLinks: '"Playfair Display", sans-serif'
-  }
+    navLinks: '"Playfair Display", sans-serif',
+  },
   // sizes: {
   //   maxContentWidth: "720px", // Sets the container size on larger screens, e.g. tablets and laptops
   //   contentWidth: "90vw", // Sets the container width on smaller screens, results in a 5vw margin on the left and right
@@ -161,4 +161,4 @@ export default merge(baseTheme, {
   //     },
   //   },
   // },
-});
+})
