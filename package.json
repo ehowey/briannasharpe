@@ -11,7 +11,6 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "typeface-homemade-apple": "^0.0.72",
-    "typeface-montserrat": "^0.0.75",
     "typeface-playfair-display": "^0.0.72"
   },
   "devDependencies": {

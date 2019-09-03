@@ -2,6 +2,7 @@
 import { jsx, Styled } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import shave from "shave"
 
 const FeaturedList = () => {
   const data = useStaticQuery(graphql`
@@ -13,6 +14,14 @@ const FeaturedList = () => {
           link
           publisher
           date
+          excerpt
+          image {
+            asset {
+              fixed(width: 300, height: 200) {
+                ...GatsbySanityImageFixed
+              }
+            }
+          }
         }
       }
       leaves: file(relativePath: { eq: "images/leaves.png" }) {
@@ -43,7 +52,6 @@ const FeaturedList = () => {
           gridColumn: "1 / -1",
           gridRow: "1 / -1",
           zIndex: "1",
-          opacity: "0.5",
         }}
         fluid={data.leaves.childImageSharp.fluid}
         alt="Watercolor Leaves"
@@ -59,15 +67,57 @@ const FeaturedList = () => {
         {writing.map(published => (
           <div
             sx={{
-              backgroundColor: "#cccccc",
+              display: "flex",
+              backgroundColor: "rgba(236,242,248,0.95)",
               p: 3,
-              m: 3,
+              mb: 3,
+              mt: 3,
+              borderRadius: 3,
             }}
             key={published.id}
           >
-            <Styled.h4>{published.title}</Styled.h4>
-            <p>{published.date}</p>
-            <p>{published.publisher}</p>
+            <Img
+              sx={{
+                flexShrink: "0",
+                mr: 3,
+              }}
+              fixed={published.image.asset.fixed}
+              alt="Watercolor Leaves"
+              imgStyle={{}}
+            />
+            <div>
+              <p
+                sx={{
+                  color: "#999",
+                  fontSize: "70%",
+                  textTransform: "uppercase",
+                  m: 0,
+                }}
+              >
+                {published.publisher}
+              </p>
+              <p
+                sx={{
+                  color: "#999",
+                  fontSize: "70%",
+                  textTransform: "uppercase",
+                  m: 0,
+                }}
+              >
+                {published.date}
+              </p>
+              <Styled.h4>{published.title}</Styled.h4>
+              <p
+                sx={{
+                  overflow: "hidden",
+                  display: "-webkit-box",
+                  "-webkit-box-orient": "vertical",
+                  "-webkit-line-clamp": "3",
+                }}
+              >
+                {published.excerpt}
+              </p>
+            </div>
           </div>
         ))}
       </div>
