@@ -2,7 +2,6 @@
 import { jsx, Styled } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import shave from "shave"
 
 const FeaturedList = () => {
   const data = useStaticQuery(graphql`
