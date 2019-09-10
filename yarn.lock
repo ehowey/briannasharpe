@@ -5681,7 +5681,7 @@ gatsby-plugin-mdx@^1.0.40:
     unist-util-remove "^1.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-plugin-offline@^3.0.5:
+gatsby-plugin-offline@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.0.6.tgz#254c75d696195fa37bf3ab6d744611df0d372815"
   integrity sha512-pqGw/u3AWiBg9WX4VLhhv3gOrKnGnUXrqYNxQ3PPzURjX5vfsrrpL1i4fYEW4TAX1dbbJllkmN9ncde6TJF9Fw==
@@ -5875,10 +5875,10 @@ gatsby-telemetry@^1.1.23:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-theme-catalyst-core@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-core/-/gatsby-theme-catalyst-core-0.4.2.tgz#17fe232e41b5526822a18377473bb4cd34ad75a8"
-  integrity sha512-9f84Gmq/2+ffyqj2eEsO3NF3w0DzUWXcSCQvmeehR7bkbibpymI1h6P37F7cAfsTp1GAL7v8AnzGHR5LxnUgFQ==
+gatsby-theme-catalyst-core@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-core/-/gatsby-theme-catalyst-core-0.4.3.tgz#cebc48ef15cf718dd0864c3f02d71f45e46d2380"
+  integrity sha512-g3PdIL7Icdm4w9MWSOz4Wxl16uQ1Kk//vkRBqyqVQld1vSpanujNaVePXWjmn85Z6q/909p1HL+M3L48lYUw8g==
   dependencies:
     "@emotion/core" "^10.0.17"
     "@mdx-js/mdx" "^1.4.5"
@@ -5887,7 +5887,7 @@ gatsby-theme-catalyst-core@^0.4.2:
     gatsby-image "^2.2.18"
     gatsby-plugin-manifest "^2.2.16"
     gatsby-plugin-mdx "^1.0.40"
-    gatsby-plugin-offline "^3.0.5"
+    gatsby-plugin-offline "^3.0.6"
     gatsby-plugin-react-helmet "^3.1.7"
     gatsby-plugin-robots-txt "^1.5.0"
     gatsby-plugin-sharp "^2.2.21"
