@@ -12,7 +12,7 @@ const FeaturedList = () => {
           id
           link
           publisher
-          date
+          date(formatString: "MMMM Do, YYYY")
           excerpt
           image {
             asset {
@@ -67,7 +67,7 @@ const FeaturedList = () => {
           <div
             sx={{
               display: "flex",
-              backgroundColor: "rgba(236,242,248,0.95)",
+              backgroundColor: "rgba(236,242,248,0.97)",
               p: 3,
               mb: 3,
               mt: 3,
@@ -93,17 +93,7 @@ const FeaturedList = () => {
                   m: 0,
                 }}
               >
-                {published.publisher}
-              </p>
-              <p
-                sx={{
-                  color: "#999",
-                  fontSize: "70%",
-                  textTransform: "uppercase",
-                  m: 0,
-                }}
-              >
-                {published.date}
+                {published.publisher} &middot; {published.date}
               </p>
               <Styled.h4>{published.title}</Styled.h4>
               <p
