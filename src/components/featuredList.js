@@ -2,6 +2,7 @@
 import { jsx, Styled } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { ButtonInternal } from "gatsby-theme-catalyst-core"
 
 const FeaturedList = () => {
   const data = useStaticQuery(graphql`
@@ -42,6 +43,7 @@ const FeaturedList = () => {
         width: "100vw",
         position: "relative",
         left: "calc(-50vw + 50%)",
+        mb: 5,
       }}
     >
       <Img
@@ -109,6 +111,11 @@ const FeaturedList = () => {
             </div>
           </div>
         ))}
+        <ButtonInternal
+          to="/published-work"
+          text="More Published Work"
+          variant="small"
+        />
       </div>
     </div>
   )

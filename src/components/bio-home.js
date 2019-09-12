@@ -2,6 +2,7 @@
 import { jsx, Styled } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { ButtonInternal } from "gatsby-theme-catalyst-core"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -16,7 +17,11 @@ const Bio = () => {
     }
   `)
   return (
-    <div>
+    <div
+      sx={{
+        mb: 5,
+      }}
+    >
       <Styled.h2>About Me</Styled.h2>
       <Img
         sx={{
@@ -54,6 +59,7 @@ const Bio = () => {
         bibendum ut tristique et egestas quis ipsum suspendisse. Egestas pretium
         aenean pharetra magna ac placerat.
       </Styled.p>
+      <ButtonInternal to="/bio" text="Full Bio" variant="small" />
     </div>
   )
 }

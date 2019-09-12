@@ -33,7 +33,7 @@ const LogoList = () => {
       }}
     >
       {logos.map(logo => (
-        <a href={logo.link} alt={logo.altText}>
+        <a href={logo.link} target="_blank" rel="noopener noreferrer">
           <Img
             sx={{
               filter: "grayscale(1)",
