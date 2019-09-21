@@ -4,10 +4,10 @@
   "version": "0.4.1",
   "author": "Eric Howey <eric@erichowey.dev>",
   "dependencies": {
-    "gatsby": "^2.15.14",
+    "gatsby": "^2.15.20",
     "gatsby-source-sanity": "^5.0.2",
-    "gatsby-theme-catalyst-core": "^0.4.3",
-    "gatsby-transformer-yaml": "^2.2.9",
+    "gatsby-theme-catalyst-core": "^0.5.0",
+    "gatsby-transformer-yaml": "^2.2.10",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "typeface-homemade-apple": "^0.0.72",

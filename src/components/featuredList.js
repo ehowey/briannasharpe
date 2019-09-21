@@ -53,6 +53,8 @@ const FeaturedList = () => {
           gridColumn: "1 / -1",
           gridRow: "1 / -1",
           zIndex: "1",
+          filter: "grayscale(1)",
+          opacity: "0.3",
         }}
         fluid={data.leaves.childImageSharp.fluid}
         alt="Watercolor Leaves"

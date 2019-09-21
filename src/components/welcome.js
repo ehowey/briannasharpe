@@ -14,7 +14,7 @@ const SiteWelcome = props => {
           }
         }
       }
-      headshot: file(relativePath: { eq: "images/headshot-bri.jpg" }) {
+      headshot: file(relativePath: { eq: "images/bri-winter.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1024) {
             ...GatsbyImageSharpFluid_withWebp
@@ -51,6 +51,16 @@ const SiteWelcome = props => {
           mr: 4,
         }}
       >
+        <Img
+          sx={{
+            borderRadius: "100%",
+            width: "200px",
+            height: "200px",
+          }}
+          fluid={data.headshot.childImageSharp.fluid}
+          alt="Watercolor Flowers"
+          imgStyle={{}}
+        />
         <h1
           sx={{
             fontSize: 7,
