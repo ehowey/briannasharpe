@@ -22,19 +22,17 @@ const Bio = () => {
         mb: 5,
       }}
     >
-      <Styled.h2>About Me</Styled.h2>
       <Img
         sx={{
-          height: "auto",
-          width: "250px",
-          float: "left",
+          height: ["250px", "auto", "auto"],
+          width: ["100%", "250px", "300px"],
+          float: ["none", "left", "left"],
           mr: 3,
-          mb: 1,
-          mt: 3,
+          mb: 2,
+          mt: [3, 2, 2],
         }}
         fluid={data.headshot.childImageSharp.fluid}
         alt="Brianna Sharpe"
-        imgStyle={{ objectFit: "contain", objectPosition: "left top" }}
       />
       <Styled.p
         sx={{

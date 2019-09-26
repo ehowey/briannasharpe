@@ -9,10 +9,11 @@ const LogoList = () => {
       allSanityLogos(filter: { featured: { eq: true } }) {
         nodes {
           altText
+          id
           link
           logo {
             asset {
-              fixed(width: 100, height: 100) {
+              fixed(width: 80, height: 80) {
                 ...GatsbySanityImageFixed
               }
             }
@@ -26,22 +27,27 @@ const LogoList = () => {
     <div
       sx={{
         mt: 4,
-        mb: 4,
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "space-between",
+        mb: 5,
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(80px, 1fr))",
+        alignItems: "center",
+        justifyItems: "center",
+        gridGap: ["1rem", "2rem", null],
       }}
     >
       {logos.map(logo => (
-        <a href={logo.link} target="_blank" rel="noopener noreferrer">
+        <a
+          key={logo.id}
+          href={logo.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Img
             sx={{
-              filter: "grayscale(1)",
-              mr: 4,
-              mb: 4,
               transition: "all 0.3s ease 0s",
               ":hover": {
-                filter: "grayscale(0)",
+                boxShadow: "0 2px 15px rgba(0,0,0,.1)",
+                transform: "translateY(-3px)",
               },
             }}
             fixed={logo.logo.asset.fixed}

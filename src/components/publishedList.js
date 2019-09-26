@@ -28,8 +28,9 @@ const PublishedList = () => {
     <div
       sx={{
         display: "grid",
-        gridTemplateColumns: "1fr 1fr",
+        gridTemplateColumns: "1fr",
         gridAutoFlow: "column-dense",
+        gridGap: "2rem",
       }}
     >
       {uniqueCategories.map(uniqueCategoryTitle => (

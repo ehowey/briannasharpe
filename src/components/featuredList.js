@@ -17,8 +17,8 @@ const FeaturedList = () => {
           excerpt
           image {
             asset {
-              fixed(width: 300, height: 200) {
-                ...GatsbySanityImageFixed
+              fluid(maxWidth: 720) {
+                ...GatsbySanityImageFluid
               }
             }
           }
@@ -38,11 +38,12 @@ const FeaturedList = () => {
     <div
       sx={{
         display: "grid",
-        gridTemplateColumns: "1fr 720px 1fr",
+        gridTemplateColumns: ["1fr", "1fr 720px 1fr", null],
         gridTemplateRows: "auto",
-        width: "100vw",
-        position: "relative",
-        left: "calc(-50vw + 50%)",
+        width: ["auto", "100vw", null],
+        position: ["static", "relative", null],
+        left: ["0", "calc(-50vw + 50%)", null],
+        mt: 2,
         mb: 5,
       }}
     >
@@ -71,9 +72,10 @@ const FeaturedList = () => {
           <div
             sx={{
               display: "flex",
+              flexDirection: ["column", "row", null],
               backgroundColor: "rgba(236,242,248,0.97)",
               p: 3,
-              mb: 3,
+              mb: 4,
               mt: 3,
               borderRadius: 3,
             }}
@@ -82,13 +84,19 @@ const FeaturedList = () => {
             <Img
               sx={{
                 flexShrink: "0",
-                mr: 3,
+                mr: [0, 3, null],
+                width: ["100%", "300px", null],
+                height: "200px",
               }}
-              fixed={published.image.asset.fixed}
+              fluid={published.image.asset.fluid}
               alt="Watercolor Leaves"
               imgStyle={{}}
             />
-            <div>
+            <div
+              sx={{
+                mt: [3, 0, 0],
+              }}
+            >
               <p
                 sx={{
                   color: "#999",
