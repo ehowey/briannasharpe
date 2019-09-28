@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-catalyst-writer",
-  "description": "Gatsby Starter: A basic implementation of Gatsby-Theme-Catalyst-Writer",
-  "version": "0.4.1",
+  "name": "briannasharpe",
+  "description": "Website for briannasharpe.com",
+  "version": "0.0.1",
   "author": "Eric Howey <eric@erichowey.dev>",
   "dependencies": {
     "gatsby": "^2.15.20",
@@ -17,9 +17,7 @@
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby",
-    "gatsby-starter",
-    "gatsby-plugin"
+    "gatsby"
   ],
   "license": "MIT",
   "scripts": {
@@ -33,9 +31,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ehowey/gatsby-starter-catalyst-writer"
+    "url": "https://github.com/ehowey/briannasharpe"
   },
   "bugs": {
-    "url": "https://github.com/ehowey/gatsby-starter-catalyst-writer/issues"
+    "url": "https://github.com/ehowey/briannasharpe/issues"
   }
 }

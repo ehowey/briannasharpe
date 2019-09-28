@@ -108,16 +108,7 @@ const FeaturedList = () => {
                 {published.publisher} &middot; {published.date}
               </p>
               <Styled.h4>{published.title}</Styled.h4>
-              <p
-                sx={{
-                  overflow: "hidden",
-                  display: "-webkit-box",
-                  "-webkit-box-orient": "vertical",
-                  "-webkit-line-clamp": "3",
-                }}
-              >
-                {published.excerpt}
-              </p>
+              <p>{published.excerpt.substring(0, 140) + "..."}</p>
             </div>
           </div>
         ))}
