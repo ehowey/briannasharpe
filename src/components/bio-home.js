@@ -47,15 +47,30 @@ const Bio = () => {
           },
         }}
       >
-        Quis enim lobortis scelerisque fermentum dui faucibus in. Sodales ut
-        etiam sit amet. Diam vulputate ut pharetra sit. Eget sit amet tellus
-        cras. Malesuada proin libero nunc consequat interdum varius. Egestas
-        quis ipsum suspendisse ultrices gravida dictum fusce. Nulla aliquet enim
-        tortor at auctor urna nunc id cursus. Mattis nunc sed blandit libero
-        volutpat. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra
-        justo. Condimentum lacinia quis vel eros donec ac odio. Arcu felis
-        bibendum ut tristique et egestas quis ipsum suspendisse. Egestas pretium
-        aenean pharetra magna ac placerat.
+        It feels nicer to be on a short-form basis, so feel free to just call me
+        Bri (she/her). I live on a mini-acreage in Alberta, Canada with my two
+        mini-humans, my very tall partner, and my husky who believes he is mini,
+        but is not.
+      </Styled.p>
+      <Styled.p>
+        I’ve been a high school teacher, dogsled guide, Outward Bound
+        instructor, base camp cook, and adventure therapy facilitator. These
+        things have prepared me pretty well for certain key aspects of my life
+        currently: dealing with poop, making meals with few ingredients and
+        little time, and giving 100% of my heart 24/7.
+      </Styled.p>
+      <Styled.p>
+        Although I have an M.Ed., two other degrees, and am a certified yoga
+        teacher, I am currently auditing courses in advanced sleep deprivation
+        studies and the postmodern semiotics of preschooler communication. For
+        extracurricular activities, I help run an LGBTQ2S+ community
+        organization.
+      </Styled.p>
+      <Styled.p>
+        I love the idea of bringing the margins into the centre — allowing the
+        body’s peripheral stories into the heart, inviting folks on the outside
+        into the hearth, and helping my kiddos feel that they have a strong
+        centre to orbit.
       </Styled.p>
       <ButtonInternal to="/bio" text="Full Bio" variant="small" />
     </div>

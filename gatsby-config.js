@@ -3,9 +3,9 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Brianna Sharpe`,
-    description: `Extends the base Catalyst Core theme to create a starter for freelance writers`,
+    description: `Centering the margins: Writer, creator, and coffee drinker.`,
     author: `Eric Howey`,
-    siteUrl: `https://gatsby-starter-catalyst-writer.netlify.com`, //Change to you site address, required for sitemap.xml and robots.txt file
+    siteUrl: `https://bsharpe.netlify.com`, //Change to you site address, required for sitemap.xml and robots.txt file
     pageLinks: [
       {
         name: `Published Work`,
@@ -34,18 +34,13 @@ module.exports = {
     socialLinks: [
       {
         name: `Email`,
-        url: `eric@erichowey.dev`,
+        url: `sharpe.brianna@gmail.com`,
         location: `footer`, //Options are "all", "header", "footer"
       },
       {
         name: `Twitter`,
-        url: `https://www.twitter.com/erchwy`,
+        url: `https://www.twitter.com/sharpe_bri`,
         location: `all`, //Options are "all", "header", "footer"
-      },
-      {
-        name: `Instagram`,
-        url: `#`,
-        location: `footer`, //Options are "all", "header", "footer"
       },
     ],
   },
@@ -68,11 +63,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-catalyst-writer`,
-        short_name: `catalyst writer`,
+        name: `Brianna Sharpe`,
+        short_name: `BSharpe`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#000000`,
+        theme_color: `#792f4a`,
         display: `minimal-ui`,
         icon: `src/images/logo-512.png`, // This path is relative to the root of the site.
       },

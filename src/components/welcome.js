@@ -19,12 +19,17 @@ const SiteWelcome = props => {
   `)
   const { theme } = useThemeUI()
   const welcomeHeight = () => {
-    if (typeof window !== "undefined") {
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(orientation: portrait)").matches
+    ) {
+      return "50vh"
+    } else if (typeof window !== "undefined") {
       return (
         window.innerHeight - parseInt(theme.sizes.headerHeightLaptop) + "px"
       )
     } else {
-      return null
+      return "70vh"
     }
   }
   return (
@@ -32,12 +37,12 @@ const SiteWelcome = props => {
       sx={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
-        gridTemplateRows: ["60vh", "50vh", welcomeHeight],
+        gridTemplateRows: ["60vh", "50vh", welcomeHeight()],
         width: "100vw",
         position: "relative",
         left: "calc(-50vw + 50%)",
         mb: 5,
-        mt: "-4rem",
+        mt: [0, 0, "-4rem"],
       }}
     >
       <div
