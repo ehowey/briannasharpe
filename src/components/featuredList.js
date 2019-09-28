@@ -24,7 +24,7 @@ const FeaturedList = () => {
           }
         }
       }
-      leaves: file(relativePath: { eq: "images/leaves.png" }) {
+      leaves: file(relativePath: { eq: "images/leaves-purp.png" }) {
         childImageSharp {
           fluid(maxWidth: 1800) {
             ...GatsbyImageSharpFluid_withWebp
@@ -37,14 +37,12 @@ const FeaturedList = () => {
   return (
     <div
       sx={{
-        display: "grid",
-        gridTemplateColumns: ["1fr", "1fr 720px 1fr", null],
-        gridTemplateRows: "auto",
-        width: ["auto", "100vw", null],
-        position: ["static", "relative", null],
-        left: ["0", "calc(-50vw + 50%)", null],
+        width: "100vw",
+        position: "relative",
+        left: "calc(-50vw + 50%)",
         mt: 2,
         mb: 5,
+        display: "grid",
       }}
     >
       <Img
@@ -54,8 +52,7 @@ const FeaturedList = () => {
           gridColumn: "1 / -1",
           gridRow: "1 / -1",
           zIndex: "1",
-          filter: "grayscale(1)",
-          opacity: "0.3",
+          opacity: "0.8",
         }}
         fluid={data.leaves.childImageSharp.fluid}
         alt="Watercolor Leaves"
@@ -63,9 +60,12 @@ const FeaturedList = () => {
       />
       <div
         sx={{
-          gridColumn: "2 / 3",
-          gridRow: "1 / 2",
           zIndex: "5",
+          width: "contentWidth",
+          maxWidth: "maxContentWidth",
+          m: "0 auto",
+          gridColumn: "1 / -1",
+          gridRow: "1 / -1",
         }}
       >
         {writing.map(published => (
@@ -76,7 +76,6 @@ const FeaturedList = () => {
               backgroundColor: "rgba(236,242,248,0.97)",
               p: 3,
               mb: 4,
-              mt: 3,
               borderRadius: 3,
             }}
             key={published.id}

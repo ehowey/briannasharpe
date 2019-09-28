@@ -37,6 +37,7 @@ const SiteWelcome = props => {
         position: "relative",
         left: "calc(-50vw + 50%)",
         mb: 5,
+        mt: "-4rem",
       }}
     >
       <div

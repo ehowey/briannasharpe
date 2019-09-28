@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 // eslint-disable-next-line
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
@@ -28,11 +28,8 @@ const PublishedList = () => {
     <div
       sx={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(500px, 1fr))",
-        gridGap: "2rem",
-        width: "100vw",
-        position: "relative",
-        left: "calc(-50vw + 50%)",
+        gridTemplateColumns: "1fr",
+        gridGap: "1rem",
       }}
     >
       {uniqueCategories.map(uniqueCategoryTitle => (
@@ -49,13 +46,13 @@ const PublishedList = () => {
                   <ul>
                     <li key={published.id}>
                       <i>{published.publisher}</i>, {published.date} &#8212;{" "}
-                      <a
+                      <Styled.a
                         href={published.link}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         {published.title}
-                      </a>
+                      </Styled.a>
                     </li>
                   </ul>
                 ))}

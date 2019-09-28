@@ -10,9 +10,9 @@ export default merge(BaseThemeSizes, {
   // logoWidth: "50px", // Logo width on small screens, height is auto
   // logoWidthTablet: "60px", // Logo width on medium screens, height is auto
   // logoWidthLaptop: "60px", // Logo width on large screens, height is auto
-  mainMarginTop: 0, // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
-  mainMarginTopTablet: 0, // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
-  mainMarginTopLaptop: 0, // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
+  mainMarginTop: "2rem", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
+  mainMarginTopTablet: "4rem", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
+  mainMarginTopLaptop: "4rem", // Used for a dynamic spacing between nav menu and page content, also for fixed header in onepage theme
   // iconsFooter: "2rem", // Sets the icons size for the footer
   // iconsHeader: "1.25rem", // Sets the icons size for the header
 })
