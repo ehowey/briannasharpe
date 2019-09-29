@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "project": {
+    "name": "BriannaSharpe.com"
+  },
+  "api": {
+    "projectId": "0kuk1hn0",
+    "dataset": "publishedwork"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    }
+  ]
+}

@@ -18,6 +18,7 @@ const SiteWelcome = props => {
     }
   `)
   const { theme } = useThemeUI()
+
   const welcomeHeight = () => {
     if (
       typeof window !== "undefined" &&

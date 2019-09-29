@@ -48,6 +48,7 @@ export default merge(BaseThemeStyles, {
       backgroundColor: "text",
       ml: 2,
       mt: "5px",
+      display: ["none", "inline", null],
     },
   },
   h2: {
@@ -67,6 +68,7 @@ export default merge(BaseThemeStyles, {
       width: "2rem",
       mr: 2,
       mt: "4px",
+      display: ["none", "inline", null],
     },
     "::after": {
       content: '""',

@@ -53,10 +53,10 @@ const FeaturedList = () => {
           gridRow: "1 / -1",
           zIndex: "1",
           opacity: "0.8",
+          display: ["none", "block", null],
         }}
         fluid={data.leaves.childImageSharp.fluid}
         alt="Watercolor Leaves"
-        imgStyle={{}}
       />
       <div
         sx={{
