@@ -6,7 +6,7 @@
   "dependencies": {
     "gatsby": "^2.15.28",
     "gatsby-source-sanity": "^5.0.3",
-    "gatsby-theme-catalyst-core": "^0.6.0",
+    "gatsby-theme-catalyst-core": "^0.6.1",
     "gatsby-transformer-yaml": "^2.2.12",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
