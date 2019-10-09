@@ -7,7 +7,7 @@ import { ButtonInternal } from "gatsby-theme-catalyst-core"
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query {
-      headshot: file(relativePath: { eq: "images/headshot.jpg" }) {
+      headshot: file(relativePath: { eq: "headshot.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1024) {
             ...GatsbyImageSharpFluid_withWebp

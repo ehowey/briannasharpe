@@ -24,7 +24,7 @@ const FeaturedList = () => {
           }
         }
       }
-      leaves: file(relativePath: { eq: "images/leaves-purp.png" }) {
+      leaves: file(relativePath: { eq: "leaves-purp.png" }) {
         childImageSharp {
           fluid(maxWidth: 1800) {
             ...GatsbyImageSharpFluid_withWebp

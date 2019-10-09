@@ -8,7 +8,7 @@ import { useThemeUI } from "theme-ui"
 const SiteWelcome = props => {
   const data = useStaticQuery(graphql`
     query {
-      flower: file(relativePath: { eq: "images/flowers-lg.png" }) {
+      flower: file(relativePath: { eq: "flowers-lg.png" }) {
         childImageSharp {
           fluid(maxWidth: 1024) {
             ...GatsbyImageSharpFluid_withWebp
