@@ -9,7 +9,7 @@
     "gatsby-theme-catalyst-core": "^0.7.0",
     "gatsby-transformer-yaml": "^2.2.13",
     "react": "^16.10.1",
-    "react-dom": "^16.10.1",
+    "react-dom": "^16.10.2",
     "typeface-homemade-apple": "^0.0.72",
     "typeface-playfair-display": "^0.0.72"
   },
