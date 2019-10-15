@@ -7,7 +7,7 @@
     "gatsby": "^2.15.36",
     "gatsby-source-sanity": "^5.0.3",
     "gatsby-theme-catalyst-core": "^0.7.0",
-    "gatsby-transformer-yaml": "^2.2.13",
+    "gatsby-transformer-yaml": "^2.2.15",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "typeface-homemade-apple": "^0.0.72",
