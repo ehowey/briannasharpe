@@ -34,18 +34,26 @@ const PublishedList = () => {
     >
       {uniqueCategories.map(uniqueCategoryTitle => (
         <div>
-          <h4>{uniqueCategoryTitle}</h4>
-          {writing.map(published => (
-            <>
-              {published.categories
-                .filter(
-                  articleCategories =>
-                    articleCategories.title === uniqueCategoryTitle
-                )
-                .map(x => (
-                  <ul>
-                    <li key={published.id}>
-                      <i>{published.publisher}</i>, {published.date} &#8212;{" "}
+          <Styled.h3 sx={{}}>{uniqueCategoryTitle}</Styled.h3>
+          <ul
+            sx={{
+              listStyle: "none",
+              m: 0,
+              p: 0,
+            }}
+          >
+            {writing.map(published => (
+              <>
+                {published.categories
+                  .filter(
+                    articleCategories =>
+                      articleCategories.title === uniqueCategoryTitle
+                  )
+                  .map(x => (
+                    <li
+                      key={published.id}
+                      sx={{ mb: 1, ":last-of-type": { mb: 0 } }}
+                    >
                       <Styled.a
                         href={published.link}
                         target="_blank"
@@ -53,11 +61,13 @@ const PublishedList = () => {
                       >
                         {published.title}
                       </Styled.a>
+                      &nbsp; &#8212; &nbsp;<i>{published.publisher}</i>,{" "}
+                      {published.date}
                     </li>
-                  </ul>
-                ))}
-            </>
-          ))}
+                  ))}
+              </>
+            ))}
+          </ul>
         </div>
       ))}
     </div>

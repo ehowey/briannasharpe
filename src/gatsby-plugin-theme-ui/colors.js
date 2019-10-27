@@ -2,8 +2,8 @@ import merge from "deepmerge"
 import { BaseThemeColors } from "gatsby-theme-catalyst-core"
 
 export default merge(BaseThemeColors, {
-  primary: "#7995ad",
-  secondary: "#354450",
+  primary: "#3e5a70",
+  secondary: "#48487A",
   muted: "#FFF2FC",
   // grey: "#c0c0c0",
   // text: "#333333",
@@ -11,17 +11,17 @@ export default merge(BaseThemeColors, {
   // background: "#ffffff",
   header: {
     background: "#eed4cc",
-    backgroundOpen: "#eed4cc",
+    backgroundOpen: "#3e5a70",
     text: "#333333",
     textOpen: "#ffffff",
     icons: "#333333",
-    iconsHover: "#3273dc",
+    iconsHover: "#48487A",
     iconsOpen: "#ffffff",
   },
   footer: {
     background: "#eed4cc",
-    text: "#666",
-    links: "#666",
-    icons: "#666",
+    text: "#333",
+    links: "#333",
+    icons: "#333",
   },
 })

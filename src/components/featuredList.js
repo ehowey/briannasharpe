@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import { ButtonInternal } from "gatsby-theme-catalyst-core"
 
 const FeaturedList = () => {
   const data = useStaticQuery(graphql`
@@ -24,7 +23,7 @@ const FeaturedList = () => {
           }
         }
       }
-      leaves: file(relativePath: { eq: "leaves-purp.png" }) {
+      leaves: file(relativePath: { eq: "leaves-pink.png" }) {
         childImageSharp {
           fluid(maxWidth: 1800) {
             ...GatsbyImageSharpFluid_withWebp
@@ -52,7 +51,7 @@ const FeaturedList = () => {
           gridColumn: "1 / -1",
           gridRow: "1 / -1",
           zIndex: "1",
-          opacity: "0.8",
+          opacity: "0.5",
           display: ["none", "block", null],
         }}
         fluid={data.leaves.childImageSharp.fluid}
@@ -73,7 +72,7 @@ const FeaturedList = () => {
             sx={{
               display: "flex",
               flexDirection: ["column", "row", null],
-              backgroundColor: "rgba(236,242,248,0.97)",
+              backgroundColor: "rgba(238,212,204,0.95)",
               p: 3,
               mb: 4,
               borderRadius: 3,
@@ -82,10 +81,12 @@ const FeaturedList = () => {
           >
             <Img
               sx={{
-                flexShrink: "0",
                 mr: [0, 3, null],
-                width: ["100%", "300px", null],
-                height: "200px",
+                maxWidth: ["100%", "250px", null],
+                maxHeight: ["250px", "100%", null],
+                flex: "1",
+                // width: ["100%", "200px", null],
+                // height: ["200px", "auto", null],
               }}
               fluid={published.image.asset.fluid}
               alt="Watercolor Leaves"
@@ -94,28 +95,94 @@ const FeaturedList = () => {
             <div
               sx={{
                 mt: [3, 0, 0],
+                flex: "2",
               }}
             >
               <p
                 sx={{
-                  color: "#999",
-                  fontSize: "70%",
+                  fontSize: "60%",
                   textTransform: "uppercase",
                   m: 0,
                 }}
               >
                 {published.publisher} &middot; {published.date}
               </p>
-              <Styled.h4>{published.title}</Styled.h4>
-              <p>{published.excerpt.substring(0, 140) + "..."}</p>
+              <Styled.h3
+                sx={{
+                  fontStyle: "italic",
+                  mt: 0,
+                }}
+              >
+                <a
+                  sx={{
+                    color: "text",
+                    textDecoration: "none",
+                    ":hover": {
+                      textDecoration: "underline",
+                    },
+                  }}
+                  href={published.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {published.title}
+                </a>
+              </Styled.h3>
+              <p>{published.excerpt.substring(0, 300) + "..."}</p>
+              <a
+                sx={{
+                  color: "text",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                  fontSize: "90%",
+                  "::after": {
+                    content: '"\\00A0 \\2192"',
+                  },
+                  ":hover": {
+                    textDecoration: "underline",
+                  },
+                }}
+                href={published.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read it
+              </a>
             </div>
           </div>
         ))}
-        <ButtonInternal
+        <Link
+          sx={{
+            appearance: "none",
+            width: "auto",
+            bg: "transparent",
+            color: "primary",
+            display: "inline-block",
+            textAlign: "center",
+            lineHeight: "inherit",
+            textDecoration: "none",
+            fontSize: "inherit",
+            m: 0,
+            px: "0.8rem",
+            py: "0.5rem",
+            borderColor: "primary",
+            borderWidth: "2px",
+            borderStyle: "solid",
+            borderRadius: 4,
+            letterSpacing: "1px",
+            transition: "all 0.3s ease 0s",
+            "::after": {
+              content: '"\\00A0 \\2192"',
+            },
+            ":hover": {
+              borderColor: "secondary",
+              color: "secondary",
+            },
+          }}
           to="/published-work"
-          text="More Published Work"
-          variant="small"
-        />
+        >
+          More Published Work
+        </Link>
       </div>
     </div>
   )

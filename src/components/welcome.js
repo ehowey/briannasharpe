@@ -18,17 +18,6 @@ const SiteWelcome = props => {
     }
   `)
 
-  const welcomeHeight = () => {
-    if (
-      typeof window !== "undefined" &&
-      window.matchMedia("(orientation: portrait)").matches
-    ) {
-      return "50vh"
-    } else {
-      return "70vh"
-    }
-  }
-
   const ref = useRef([])
   const [items, set] = useState([])
   const transitions = useTransition(items, null, {
@@ -64,7 +53,9 @@ const SiteWelcome = props => {
         bg: "#eed4cc",
         mb: 5,
         mt: -3,
-        p: [3, 3, 5],
+        px: 3,
+        pt: 3,
+        pb: 5,
       }}
     >
       <div
@@ -82,10 +73,11 @@ const SiteWelcome = props => {
           sx={{
             fontSize: [6, 7, 7],
             fontFamily: "alt",
+            fontWeight: "400",
+            fontStyle: "italic",
           }}
         >
-          Words that tell
-          <br /> stories about &nbsp;
+          Writing about&nbsp;
           {transitions.map(({ item, props: { innerHeight, ...rest }, key }) => (
             <animated.div
               className="transitions-item"
@@ -119,10 +111,9 @@ const SiteWelcome = props => {
               lineHeight: "inherit",
               textDecoration: "none",
               fontSize: "inherit",
-              fontWeight: "bold",
               m: 0,
-              px: 3,
-              py: 2,
+              px: "0.8rem",
+              py: "0.5rem",
               borderColor: "primary",
               borderWidth: "2px",
               borderStyle: "solid",
@@ -133,7 +124,8 @@ const SiteWelcome = props => {
                 content: '"\\00A0 \\2192"',
               },
               ":hover": {
-                opacity: "0.8",
+                bg: "secondary",
+                borderColor: "secondary",
               },
             }}
             to="/published-work"
@@ -153,10 +145,9 @@ const SiteWelcome = props => {
               lineHeight: "inherit",
               textDecoration: "none",
               fontSize: "inherit",
-              fontWeight: "bold",
               m: 0,
-              px: 3,
-              py: 2,
+              px: "0.8rem",
+              py: "0.5rem",
               borderColor: "primary",
               borderWidth: "2px",
               borderStyle: "solid",
@@ -167,7 +158,8 @@ const SiteWelcome = props => {
                 content: '"\\00A0 \\2192"',
               },
               ":hover": {
-                opacity: "0.8",
+                borderColor: "secondary",
+                color: "secondary",
               },
             }}
             to="/bio"
