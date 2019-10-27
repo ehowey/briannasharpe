@@ -3,12 +3,11 @@ import { jsx } from "theme-ui"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { ButtonInternal } from "gatsby-theme-catalyst-core"
-import { useThemeUI } from "theme-ui"
 
 const SiteWelcome = props => {
   const data = useStaticQuery(graphql`
     query {
-      flower: file(relativePath: { eq: "flowers-lg.png" }) {
+      hero: file(relativePath: { eq: "person.png" }) {
         childImageSharp {
           fluid(maxWidth: 1024) {
             ...GatsbyImageSharpFluid_withWebp
@@ -17,7 +16,6 @@ const SiteWelcome = props => {
       }
     }
   `)
-  const { theme } = useThemeUI()
 
   const welcomeHeight = () => {
     if (
@@ -26,9 +24,31 @@ const SiteWelcome = props => {
     ) {
       return "50vh"
     } else {
-      return "80vh"
+      return "70vh"
     }
   }
+
+  // const ref = useRef([])
+  // const [items, set] = useState([])
+  // const transitions = useTransition(items, null, {
+  //   from: {
+  //     opacity: 0,
+  //     x: -20,
+  //   },
+  //   enter: [{ opacity: 1, x: 0 }],
+  //   leave: [{ opacity: 0 }],
+  // })
+
+  // const reset = useCallback(() => {
+  //   ref.current.map(clearTimeout)
+  //   ref.current = []
+  //   set([])
+  //   ref.current.push(setTimeout(() => set(["Title One"]), 0))
+  //   ref.current.push(setTimeout(() => set(["Title Two"]), 2000))
+  //   ref.current.push(setTimeout(() => set(["Title Three"]), 4000))
+  // }, [])
+
+  // useEffect(() => void reset(), [])
   return (
     <div
       sx={{
@@ -38,8 +58,10 @@ const SiteWelcome = props => {
         width: "100vw",
         position: "relative",
         left: "calc(-50vw + 50%)",
+        bg: "#eed4cc",
         mb: 5,
-        mt: [0, 0, "-4rem"],
+        mt: -3,
+        p: 5,
       }}
     >
       <div
@@ -47,10 +69,9 @@ const SiteWelcome = props => {
           gridColumn: ["1 / -1", "1 / -1", "2 / 3"],
           gridRow: "1 / 2",
           alignSelf: "center",
-          justifySelf: "center",
           zIndex: "5",
-          m: [4, 4, 5],
           maxWidth: "maxContentWidth",
+          // m: [4, 4, 5],
         }}
       >
         <h1
@@ -61,14 +82,7 @@ const SiteWelcome = props => {
         >
           {props.title}
         </h1>
-        <h2
-          sx={{
-            fontSize: [4, 5, 5],
-            fontFamily: "text",
-          }}
-        >
-          {props.subtitle}
-        </h2>
+        <p>{props.subtitle}</p>
         <ButtonInternal
           to="/published-work"
           text="Published Work"
@@ -84,11 +98,11 @@ const SiteWelcome = props => {
           height: "100%",
           width: "auto",
           zIndex: 1,
-          opacity: ["0.2", "0.2", "1"],
+          opacity: ["0.3", "0.3", "1"],
         }}
-        fluid={data.flower.childImageSharp.fluid}
-        alt="Watercolor Flowers"
-        imgStyle={{ objectFit: "contain", objectPosition: "left" }}
+        fluid={data.hero.childImageSharp.fluid}
+        alt="Person with shapes and colors from head"
+        imgStyle={{ objectFit: "contain" }}
       />
     </div>
   )
