@@ -58,7 +58,7 @@ export default merge(BaseThemeStyles, {
     m: 0,
     mb: 4,
     fontSize: 5,
-    mt: 4,
+    mt: 5,
     display: "flex",
     alignItems: "center",
     "::before": {

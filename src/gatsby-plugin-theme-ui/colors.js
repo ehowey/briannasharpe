@@ -10,7 +10,7 @@ export default merge(BaseThemeColors, {
   // textWhite: "#ffffff",
   // background: "#ffffff",
   header: {
-    background: "#eed4cc",
+    background: "transparent",
     backgroundOpen: "#3e5a70",
     text: "#333333",
     textOpen: "#ffffff",
