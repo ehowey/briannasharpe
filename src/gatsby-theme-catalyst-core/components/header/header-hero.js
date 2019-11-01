@@ -160,7 +160,7 @@ const SiteWelcome = () => {
                   borderColor: "secondary",
                 },
               }}
-              to="/published-work"
+              to="/work"
             >
               Published Work
             </Link>

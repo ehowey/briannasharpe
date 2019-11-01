@@ -176,7 +176,7 @@ const FeaturedList = () => {
               color: "secondary",
             },
           }}
-          to="/published-work"
+          to="/work"
         >
           More Published Work
         </Link>
