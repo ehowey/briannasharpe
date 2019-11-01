@@ -9,7 +9,7 @@ import { NavContext } from "gatsby-theme-catalyst-core"
 const SiteWelcome = () => {
   const data = useStaticQuery(graphql`
     query {
-      hero: file(relativePath: { eq: "person.png" }) {
+      hero: file(relativePath: { eq: "hero-person.png" }) {
         childImageSharp {
           fluid(maxWidth: 1024) {
             ...GatsbyImageSharpFluid_withWebp

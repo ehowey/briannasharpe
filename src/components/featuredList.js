@@ -23,7 +23,7 @@ const FeaturedList = () => {
           }
         }
       }
-      leaves: file(relativePath: { eq: "leaves-pink.png" }) {
+      leaves: file(relativePath: { eq: "bg-leaves.png" }) {
         childImageSharp {
           fluid(maxWidth: 1800) {
             ...GatsbyImageSharpFluid_withWebp
@@ -51,7 +51,7 @@ const FeaturedList = () => {
           gridColumn: "1 / -1",
           gridRow: "1 / -1",
           zIndex: "1",
-          opacity: "0.5",
+          opacity: "0.2",
           display: ["none", "block", null],
         }}
         fluid={data.leaves.childImageSharp.fluid}
@@ -85,12 +85,9 @@ const FeaturedList = () => {
                 maxWidth: ["100%", "250px", null],
                 maxHeight: ["250px", "100%", null],
                 flex: "1",
-                // width: ["100%", "200px", null],
-                // height: ["200px", "auto", null],
               }}
               fluid={published.image.asset.fluid}
-              alt="Watercolor Leaves"
-              imgStyle={{}}
+              alt={published.title}
             />
             <div
               sx={{

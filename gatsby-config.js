@@ -9,7 +9,7 @@ module.exports = {
     pageLinks: [
       {
         name: `Published Work`,
-        link: `/published-work`,
+        link: `/work`,
       },
       {
         name: `Bio`,
@@ -69,7 +69,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#792f4a`,
         display: `minimal-ui`,
-        icon: `src/images/logo-512.png`, // This path is relative to the root of the site.
+        icon: `content/assets/logo-512.png`, // This path is relative to the root of the site.
       },
     },
   ],
