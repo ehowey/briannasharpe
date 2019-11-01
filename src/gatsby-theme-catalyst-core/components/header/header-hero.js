@@ -162,7 +162,7 @@ const SiteWelcome = () => {
               }}
               to="/published-work"
             >
-              Publshed Work
+              Published Work
             </Link>
             <Link
               sx={{

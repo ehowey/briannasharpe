@@ -23,7 +23,7 @@ const PublishedList = () => {
     }
   `)
   const writing = data.allSanityPublishedWork.nodes
-  const uniqueCategories = data.allSanityPublishedWork.distinct
+  const uniqueCategories = data.allSanityPublishedWork.distinct.reverse()
   return (
     <div
       sx={{
@@ -33,8 +33,8 @@ const PublishedList = () => {
       }}
     >
       {uniqueCategories.map(uniqueCategoryTitle => (
-        <div>
-          <Styled.h3 sx={{}}>{uniqueCategoryTitle}</Styled.h3>
+        <div sx={{ mb: 4 }}>
+          <Styled.h3>{uniqueCategoryTitle}</Styled.h3>
           <ul
             sx={{
               listStyle: "none",
@@ -52,7 +52,7 @@ const PublishedList = () => {
                   .map(x => (
                     <li
                       key={published.id}
-                      sx={{ mb: 1, ":last-of-type": { mb: 0 } }}
+                      sx={{ mb: 3, ":last-of-type": { mb: 0 } }}
                     >
                       <Styled.a
                         href={published.link}
@@ -61,8 +61,7 @@ const PublishedList = () => {
                       >
                         {published.title}
                       </Styled.a>
-                      &nbsp; &#8212; &nbsp;<i>{published.publisher}</i>,{" "}
-                      {published.date}
+                      &nbsp; &#8212; &nbsp;<i>{published.publisher}</i>
                     </li>
                   ))}
               </>
