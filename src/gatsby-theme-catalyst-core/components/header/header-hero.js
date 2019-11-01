@@ -28,8 +28,10 @@ const SiteWelcome = () => {
       window.matchMedia("(min-width: 768px)").matches
     ) {
       return "60vh"
-    } else {
+    } else if (window.matchMedia("(min-width: 768px)").matches) {
       return "100vh"
+    } else {
+      return "auto"
     }
   }
 
@@ -75,6 +77,7 @@ const SiteWelcome = () => {
           height: welcomeHeight,
           bg: "#eed4cc",
           px: 3,
+          py: [5, null, 0, null, null],
         }}
       >
         <div
