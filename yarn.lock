@@ -6256,10 +6256,10 @@ gatsby-telemetry@^1.1.33:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-theme-catalyst-core@^0.10.1:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-core/-/gatsby-theme-catalyst-core-0.10.1.tgz#4c6d8c0509ed637e1e013d482e17d8d23a93b6c3"
-  integrity sha512-Oi2EeHWgkGPF8PqRXBKavN7knhTuKzGZHqhqBmv6ZZXyMYEyclY8xpRGYyvCzJxI7Pk5KEYg9ZIfB14wRT4UEQ==
+gatsby-theme-catalyst-core@^0.10.2:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-core/-/gatsby-theme-catalyst-core-0.10.2.tgz#0ec893fad8f3c39784f532ce5df8a08024fa5e0d"
+  integrity sha512-1H4jL4fkgK7hQX4/eKbQX+jyz4SfbdcFY7qXqe5fMqOaeKwZR8TXFeFWPDDtrXp+NAhUgrSh32DY7fGUZT9Y3A==
   dependencies:
     "@emotion/core" "^10.0.22"
     "@mdx-js/mdx" "^1.5.1"
