@@ -22,10 +22,7 @@
     "@sanity/desk-tool": "^0.144.2",
     "prop-types": "^15.6",
     "react": "^16.2",
-    "react-dom": "^16.2",
+    "react-dom": "^16.2"
   },
-  "devDependencies": {},
-  "resolutions": {
-    "postcss": "^7.0.21"
-  }
+  "devDependencies": {}
 }

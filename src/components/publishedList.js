@@ -7,7 +7,10 @@ import { useStaticQuery, graphql } from "gatsby"
 const PublishedList = () => {
   const data = useStaticQuery(graphql`
     query {
-      allSanityPublishedWork(sort: { order: DESC, fields: date }) {
+      allSanityPublishedWork(
+        sort: { order: DESC, fields: date }
+        filter: { include: { eq: true } }
+      ) {
         nodes {
           title
           id
@@ -23,7 +26,7 @@ const PublishedList = () => {
     }
   `)
   const writing = data.allSanityPublishedWork.nodes
-  const uniqueCategories = data.allSanityPublishedWork.distinct.reverse()
+  const uniqueCategories = data.allSanityPublishedWork.distinct
   return (
     <div
       sx={{
