@@ -7,26 +7,81 @@ import { useStaticQuery, graphql } from "gatsby"
 const PublishedList = () => {
   const data = useStaticQuery(graphql`
     query {
-      allSanityPublishedWork(
-        sort: { order: DESC, fields: date }
-        filter: { include: { eq: true } }
+      cat1: allSanityPublishedWork(
+        filter: {
+          include: { eq: true }
+          categories: { elemMatch: { order: { eq: 1 } } }
+        }
+        sort: { fields: date, order: DESC }
       ) {
         nodes {
           title
           id
           link
           publisher
-          date(formatString: "MMMM YYYY")
           categories {
             title
           }
         }
-        distinct(field: categories___title)
+      }
+      cat2: allSanityPublishedWork(
+        filter: {
+          include: { eq: true }
+          categories: { elemMatch: { order: { eq: 2 } } }
+        }
+        sort: { fields: date, order: DESC }
+      ) {
+        nodes {
+          title
+          id
+          link
+          publisher
+          categories {
+            title
+          }
+        }
+      }
+      cat3: allSanityPublishedWork(
+        filter: {
+          include: { eq: true }
+          categories: { elemMatch: { order: { eq: 3 } } }
+        }
+        sort: { fields: date, order: DESC }
+      ) {
+        nodes {
+          title
+          id
+          link
+          publisher
+          categories {
+            title
+          }
+        }
+      }
+      cat4: allSanityPublishedWork(
+        filter: {
+          include: { eq: true }
+          categories: { elemMatch: { order: { eq: 4 } } }
+        }
+        sort: { fields: date, order: DESC }
+      ) {
+        nodes {
+          title
+          id
+          link
+          publisher
+          categories {
+            title
+          }
+        }
       }
     }
   `)
-  const writing = data.allSanityPublishedWork.nodes
-  const uniqueCategories = data.allSanityPublishedWork.distinct
+  const cat1 = data.cat1.nodes
+  const cat2 = data.cat2.nodes
+  const cat3 = data.cat3.nodes
+  const cat4 = data.cat4.nodes
+
   return (
     <div
       sx={{
@@ -35,43 +90,98 @@ const PublishedList = () => {
         gridGap: "1rem",
       }}
     >
-      {uniqueCategories.map(uniqueCategoryTitle => (
-        <div sx={{ mb: 4 }}>
-          <Styled.h3>{uniqueCategoryTitle}</Styled.h3>
-          <ul
-            sx={{
-              listStyle: "none",
-              m: 0,
-              p: 0,
-            }}
-          >
-            {writing.map(published => (
-              <>
-                {published.categories
-                  .filter(
-                    articleCategories =>
-                      articleCategories.title === uniqueCategoryTitle
-                  )
-                  .map(x => (
-                    <li
-                      key={published.id}
-                      sx={{ mb: 3, ":last-of-type": { mb: 0 } }}
-                    >
-                      <Styled.a
-                        href={published.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {published.title}
-                      </Styled.a>
-                      &nbsp; &#8212; &nbsp;<i>{published.publisher}</i>
-                    </li>
-                  ))}
-              </>
-            ))}
-          </ul>
-        </div>
-      ))}
+      <div sx={{ mb: 4 }}>
+        <Styled.h3>Reported Features</Styled.h3>
+        <ul
+          sx={{
+            listStyle: "none",
+            m: 0,
+            p: 0,
+          }}
+        >
+          {cat1.map(work => (
+            <li sx={{ mb: 3, ":last-of-type": { mb: 0 } }} key={work.id}>
+              <Styled.a
+                href={work.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {work.title}
+              </Styled.a>
+              &nbsp; &#8212; &nbsp;<i>{work.publisher}</i>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div sx={{ mb: 4 }}>
+        <Styled.h3>Personal Essays</Styled.h3>
+        <ul
+          sx={{
+            listStyle: "none",
+            m: 0,
+            p: 0,
+          }}
+        >
+          {cat2.map(work => (
+            <li sx={{ mb: 3, ":last-of-type": { mb: 0 } }} key={work.id}>
+              <Styled.a
+                href={work.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {work.title}
+              </Styled.a>
+              &nbsp; &#8212; &nbsp;<i>{work.publisher}</i>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div sx={{ mb: 4 }}>
+        <Styled.h3>Profiles</Styled.h3>
+        <ul
+          sx={{
+            listStyle: "none",
+            m: 0,
+            p: 0,
+          }}
+        >
+          {cat3.map(work => (
+            <li sx={{ mb: 3, ":last-of-type": { mb: 0 } }} key={work.id}>
+              <Styled.a
+                href={work.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {work.title}
+              </Styled.a>
+              &nbsp; &#8212; &nbsp;<i>{work.publisher}</i>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div sx={{ mb: 4 }}>
+        <Styled.h3>Editorials</Styled.h3>
+        <ul
+          sx={{
+            listStyle: "none",
+            m: 0,
+            p: 0,
+          }}
+        >
+          {cat4.map(work => (
+            <li sx={{ mb: 3, ":last-of-type": { mb: 0 } }} key={work.id}>
+              <Styled.a
+                href={work.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {work.title}
+              </Styled.a>
+              &nbsp; &#8212; &nbsp;<i>{work.publisher}</i>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }
