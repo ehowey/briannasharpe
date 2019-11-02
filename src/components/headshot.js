@@ -18,11 +18,11 @@ const Headshot = () => {
   return (
     <Img
       sx={{
-        height: ["150px", "200px", null],
-        width: ["100%", "200px", null],
+        height: ["150px", "200px", null, null, null],
+        width: ["100%", "200px", null, null, null],
         float: "left",
-        mr: [0, 3, null],
-        mb: [3, 0, null],
+        mr: [0, 3, null, null, null],
+        mb: [3, 0, null, null, null],
       }}
       fluid={data.headshot.childImageSharp.fluid}
       alt="Brianna Sharpe"

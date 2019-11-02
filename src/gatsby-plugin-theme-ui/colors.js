@@ -4,6 +4,7 @@ import { BaseThemeColors } from "gatsby-theme-catalyst-core"
 export default merge(BaseThemeColors, {
   primary: "#3e5a70",
   secondary: "#48487A",
+  accent: "#eed4cc",
   muted: "#FFF2FC",
   // grey: "#c0c0c0",
   // text: "#333333",

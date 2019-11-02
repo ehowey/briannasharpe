@@ -52,7 +52,7 @@ const FeaturedList = () => {
           gridRow: "1 / -1",
           zIndex: "1",
           opacity: "0.2",
-          display: ["none", "block", null],
+          display: ["none", "block", null, null, null],
         }}
         fluid={data.leaves.childImageSharp.fluid}
         alt="Watercolor Leaves"
@@ -70,9 +70,12 @@ const FeaturedList = () => {
         {writing.map(published => (
           <div
             sx={{
+              width: ["100vw", "auto", null, null, null],
+              position: ["relative", "static", null, null, null],
+              left: ["calc(-50vw + 50%)", "0", null, null, null],
               display: "flex",
-              flexDirection: ["column", "row", null],
-              backgroundColor: "rgba(238,212,204,0.95)",
+              flexDirection: ["column", null, "row", null, null],
+              backgroundColor: "accent",
               p: 3,
               mb: 4,
               borderRadius: 3,
@@ -81,9 +84,9 @@ const FeaturedList = () => {
           >
             <Img
               sx={{
-                mr: [0, 3, null],
-                maxWidth: ["100%", "250px", null],
-                maxHeight: ["250px", "100%", null],
+                mr: [0, null, 3, null, null],
+                maxWidth: ["100%", null, "250px", null, null],
+                maxHeight: ["250px", null, "100%", null, null],
                 flex: "1",
               }}
               fluid={published.image.asset.fluid}
@@ -91,7 +94,7 @@ const FeaturedList = () => {
             />
             <div
               sx={{
-                mt: [3, 0, 0],
+                mt: [3, null, 0, null, null],
                 flex: "2",
               }}
             >

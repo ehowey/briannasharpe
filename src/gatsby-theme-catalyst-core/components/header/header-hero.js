@@ -73,22 +73,22 @@ const SiteWelcome = () => {
           zIndex: "1",
           display: open ? "none" : "grid",
           gridTemplateColumns: "1fr 1fr",
-          gridTemplateRows: ["auto", "auto", "auto"],
+          gridTemplateRows: "auto",
           height: welcomeHeight,
-          bg: "#eed4cc",
+          backgroundColor: "accent",
           px: 3,
           py: [5, null, 0, null, null],
         }}
       >
         <div
           sx={{
-            gridColumn: ["1 / -1", "1 / -1", "2 / 3"],
+            gridColumn: ["1 / -1", null, "2 / 3", null, null],
             gridRow: "1 / 2",
             alignSelf: "center",
             justifySelf: "center",
             zIndex: "5",
             maxWidth: "maxContentWidth",
-            mx: [0, 0, 3],
+            mx: [0, 0, 3, null, null],
           }}
         >
           <h1

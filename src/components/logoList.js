@@ -32,7 +32,7 @@ const LogoList = () => {
         gridTemplateColumns: "repeat(auto-fill, minmax(80px, 1fr))",
         alignItems: "center",
         justifyItems: "center",
-        gridGap: ["1rem", "2rem", null],
+        gridGap: ["1rem", null, "2rem", null, null],
       }}
     >
       {logos.map(logo => (
