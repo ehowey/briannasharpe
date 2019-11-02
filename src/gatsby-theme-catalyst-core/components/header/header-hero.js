@@ -93,7 +93,7 @@ const SiteWelcome = () => {
         >
           <h1
             sx={{
-              fontSize: [6, 7, 7],
+              fontSize: [6, null, 7, null, null],
               fontFamily: "alt",
               fontWeight: "400",
               fontStyle: "italic",
@@ -129,7 +129,7 @@ const SiteWelcome = () => {
               display: "grid",
               gridTemplateColumns: "auto 1fr",
               gridTemplateRows: "auto",
-              gridGap: "2rem",
+              gridGap: ["1rem", null, "2rem", null, null],
               pt: 3,
             }}
           >
@@ -145,7 +145,7 @@ const SiteWelcome = () => {
                 textAlign: "center",
                 lineHeight: "inherit",
                 textDecoration: "none",
-                fontSize: "inherit",
+                fontSize: "85%",
                 m: 0,
                 px: "0.8rem",
                 py: "0.5rem",
@@ -179,7 +179,7 @@ const SiteWelcome = () => {
                 textAlign: "center",
                 lineHeight: "inherit",
                 textDecoration: "none",
-                fontSize: "inherit",
+                fontSize: "85%",
                 m: 0,
                 px: "0.8rem",
                 py: "0.5rem",
@@ -206,20 +206,19 @@ const SiteWelcome = () => {
 
         <Img
           sx={{
-            gridColumn: ["1 / -1", "1 / -1", "1 / 2"],
+            gridColumn: ["1 / -1", "1 / -1", "1 / 2", null, null],
             gridRow: "1 / 2",
             alignSelf: "center",
             height: "100%",
             width: "auto",
             zIndex: 1,
-            opacity: ["0.2", "0.2", "1"],
+            opacity: ["0.2", "0.2", "1", null, null],
             maxHeight: "70vh",
           }}
           fluid={data.hero.childImageSharp.fluid}
           alt="Person with shapes and colors from head"
           imgStyle={{ objectFit: "contain" }}
           loading="eager"
-          fadeIn="false"
         />
       </div>
     )

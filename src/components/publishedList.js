@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const PublishedList = () => {
   const data = useStaticQuery(graphql`
     query {
-      allSanityPublishedWork {
+      allSanityPublishedWork(sort: { order: DESC, fields: date }) {
         nodes {
           title
           id

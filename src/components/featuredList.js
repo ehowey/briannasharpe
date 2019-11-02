@@ -6,7 +6,10 @@ import Img from "gatsby-image"
 const FeaturedList = () => {
   const data = useStaticQuery(graphql`
     query {
-      allSanityPublishedWork(filter: { featured: { eq: true } }) {
+      allSanityPublishedWork(
+        sort: { order: DESC, fields: date }
+        filter: { featured: { eq: true } }
+      ) {
         nodes {
           title
           id
@@ -75,7 +78,7 @@ const FeaturedList = () => {
               left: ["calc(-50vw + 50%)", "0", null, null, null],
               display: "flex",
               flexDirection: ["column", null, "row", null, null],
-              backgroundColor: "accent",
+              backgroundColor: "#f9f2e6",
               p: 3,
               mb: 4,
               borderRadius: 3,
@@ -161,7 +164,7 @@ const FeaturedList = () => {
             textAlign: "center",
             lineHeight: "inherit",
             textDecoration: "none",
-            fontSize: "inherit",
+            fontSize: "85%",
             m: 0,
             px: "0.8rem",
             py: "0.5rem",
