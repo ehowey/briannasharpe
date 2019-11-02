@@ -5,7 +5,7 @@ module.exports = {
     title: `Brianna Sharpe`,
     description: `Centering the margins: Writer, creator, and coffee drinker.`,
     author: `Eric Howey`,
-    siteUrl: `https://bsharpe.netlify.com`, //Change to you site address, required for sitemap.xml and robots.txt file
+    siteUrl: `https://www.briannasharpe.com`, //Change to you site address, required for sitemap.xml and robots.txt file
     pageLinks: [
       {
         name: `Published Work`,
@@ -67,7 +67,7 @@ module.exports = {
         short_name: `BSharpe`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#792f4a`,
+        theme_color: `#cccccc`,
         display: `minimal-ui`,
         icon: `content/assets/logo-512.png`, // This path is relative to the root of the site.
       },
