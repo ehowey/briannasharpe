@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { useRef, useState, useEffect, useCallback, useContext } from "react"
+import { useContext } from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import { useTransition, animated } from "react-spring"
 import Img from "gatsby-image"
 import { NavContext } from "gatsby-theme-catalyst-core"
 
@@ -38,29 +37,6 @@ const SiteWelcome = () => {
   if (typeof window !== "undefined") {
     var is_root = window.location.pathname === "/" //Equals true if we're at the root
   }
-
-  const ref = useRef([])
-  const [items, set] = useState([])
-  const transitions = useTransition(items, null, {
-    from: {
-      opacity: 0,
-    },
-    enter: [{ opacity: 1 }],
-    leave: [{ opacity: 0 }],
-  })
-
-  const reset = useCallback(() => {
-    ref.current.map(clearTimeout)
-    ref.current = []
-    set([])
-    ref.current.push(setTimeout(() => set(["power."]), 0))
-    ref.current.push(setTimeout(() => set(["beauty."]), 2000))
-    ref.current.push(setTimeout(() => set(["coffee."]), 4000))
-    ref.current.push(setTimeout(() => set(["identity."]), 6000))
-    ref.current.push(setTimeout(() => set(["change."]), 8000))
-  }, [])
-  // eslint-disable-next-line
-  useEffect(() => void reset(), [])
 
   if (!is_root) {
     return null
