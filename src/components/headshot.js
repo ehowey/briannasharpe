@@ -8,7 +8,7 @@ const Headshot = () => {
     query {
       headshot: file(relativePath: { eq: "bri-headshot.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 600) {
+          fluid(maxWidth: 720) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
