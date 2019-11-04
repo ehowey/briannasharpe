@@ -74,62 +74,47 @@ const SiteWelcome = () => {
           display: open ? "none" : "grid",
           gridTemplateColumns: "1fr 1fr",
           gridTemplateRows: "auto",
+          gridGap: 3,
           height: welcomeHeight,
           backgroundColor: "accent",
           px: 3,
-          py: [5, null, 0, null, null],
+          py: [5, null, null, 0, null],
         }}
       >
         <div
           sx={{
-            gridColumn: ["1 / -1", null, "2 / 3", null, null],
+            gridColumn: ["1 / -1", null, null, "2 / 3", null],
             gridRow: "1 / 2",
             alignSelf: "center",
             justifySelf: "center",
             zIndex: "5",
             maxWidth: "maxContentWidth",
-            mx: [0, 0, 3, null, null],
+            mx: [0, null, null, 3, null],
           }}
         >
           <h1
             sx={{
-              fontSize: [6, null, 7, null, null],
+              fontSize: [6, null, null, 7, null],
               fontFamily: "alt",
               fontWeight: "400",
               fontStyle: "italic",
             }}
           >
-            Writing about&nbsp;
-            {transitions.map(
-              ({ item, props: { innerHeight, ...rest }, key }) => (
-                <animated.div
-                  className="transitions-item"
-                  key={key}
-                  style={{
-                    position: "absolute",
-                    display: "inline-block",
-                    ...rest,
-                  }}
-                >
-                  {item}
-                </animated.div>
-              )
-            )}
+            "Only connect" - E.M. Forster
           </h1>
           <p>
-            I’m an Alberta based essayist and journalist who loves pulling at
-            loose threads to see what unravels — and then making sense of the
-            mess. I often cover climate, LGBTQ2S+ issues, mental health, and
-            parenting, but the threads can lead anywhere. You can find my work
-            on HuffPost Canada, TVO, The New York Times, Xtra, Today’s Parent,
-            and more.
+            I’m an Alberta-based freelance writer who loves pulling at loose
+            threads to see what unravels — and then making sense of the mess. I
+            often cover climate, LGBTQ2S+ issues, mental health, and parenting,
+            but the threads can lead anywhere. You can find my work on HuffPost
+            Canada, TVO, The New York Times, Xtra, Today’s Parent, and more.
           </p>
           <div
             sx={{
               display: "grid",
               gridTemplateColumns: "auto 1fr",
               gridTemplateRows: "auto",
-              gridGap: ["1rem", null, "2rem", null, null],
+              gridGap: ["1rem", null, null, "2rem", null],
               pt: 3,
             }}
           >
@@ -206,14 +191,14 @@ const SiteWelcome = () => {
 
         <Img
           sx={{
-            gridColumn: ["1 / -1", "1 / -1", "1 / 2", null, null],
+            gridColumn: ["1 / -1", null, null, "1 / 2", null],
             gridRow: "1 / 2",
             alignSelf: "center",
             height: "100%",
             width: "auto",
             zIndex: 1,
-            opacity: ["0.2", "0.2", "1", null, null],
-            maxHeight: "70vh",
+            opacity: ["0.2", null, null, "1", null],
+            maxHeight: ["100vh", null, null, "70vh", null],
           }}
           fluid={data.hero.childImageSharp.fluid}
           alt="Person with shapes and colors from head"
