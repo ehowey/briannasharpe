@@ -6256,10 +6256,10 @@ gatsby-telemetry@^1.1.33:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-theme-catalyst-core@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-core/-/gatsby-theme-catalyst-core-0.11.0.tgz#d995c9af83fffd748bde94089406e0e580c2674d"
-  integrity sha512-FgaN49JaDi0uinNaOm2JtDdXogUe4mdPNEloQOEbB2mB6vlXzfz9bxKRc12yPS2XlGVpMRf2yZF+CY6MQ50NRg==
+gatsby-theme-catalyst-core@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-core/-/gatsby-theme-catalyst-core-0.12.0.tgz#b4572805f7872d80ee83366e4c378019e2985812"
+  integrity sha512-4srelstPuSV1b6hGuVj4chleTArENllxFSGbm90evyJUIPb3rToeP+WA07IiFwsyg7WTIiueQbBObpMHZgxRkA==
   dependencies:
     "@emotion/core" "^10.0.22"
     "@mdx-js/mdx" "^1.5.1"
@@ -6281,7 +6281,6 @@ gatsby-theme-catalyst-core@^0.11.0:
     gatsby-remark-smartypants "^2.1.14"
     gatsby-source-filesystem "^2.1.33"
     gatsby-transformer-sharp "^2.3.0"
-    lodash.debounce "^4.0.8"
     prop-types "^15.7.2"
     react-helmet "^5.2.1"
     react-icons "^3.8.0"
@@ -8510,11 +8509,6 @@ lodash.bind@^4.1.4:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/lodash.bind/-/lodash.bind-4.2.1.tgz#7ae3017e939622ac31b7d7d7dcb1b34db1690d35"
   integrity sha1-euMBfpOWIqwxt9fX3LGzTbFpDTU=
-
-lodash.debounce@^4.0.8:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
-  integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
 lodash.defaults@^4.0.1:
   version "4.2.0"

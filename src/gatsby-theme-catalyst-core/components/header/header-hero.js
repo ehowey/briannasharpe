@@ -4,6 +4,7 @@ import { useContext } from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import { NavContext } from "gatsby-theme-catalyst-core"
+import { HomeContext } from "gatsby-theme-catalyst-core"
 
 const SiteWelcome = () => {
   const data = useStaticQuery(graphql`
@@ -17,8 +18,6 @@ const SiteWelcome = () => {
       }
     }
   `)
-
-  const [open] = useContext(NavContext)
 
   const welcomeHeight = () => {
     if (
@@ -34,20 +33,17 @@ const SiteWelcome = () => {
     }
   }
 
-  if (typeof window !== "undefined") {
-    var is_root = window.location.pathname === "/" //Equals true if we're at the root
-  }
+  const [isOpen] = useContext(NavContext)
+  const [isHome] = useContext(HomeContext)
 
-  if (!is_root) {
-    return null
-  } else {
+  if (isHome) {
     return (
       <div
         sx={{
           gridRow: "1 / -1",
           gridColumn: "1 / -1",
           zIndex: "1",
-          display: open ? "none" : "grid",
+          display: isOpen ? "none" : "grid",
           gridTemplateColumns: "1fr 1fr",
           gridTemplateRows: "auto",
           gridGap: 3,
@@ -183,6 +179,8 @@ const SiteWelcome = () => {
         />
       </div>
     )
+  } else {
+    return null
   }
 }
 
