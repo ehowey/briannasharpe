@@ -816,7 +816,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.3.1", "@babel/runtime@^7.6.3":
+"@babel/runtime@^7.6.3":
   version "7.6.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
   integrity sha512-kq6anf9JGjW8Nt5rYfEuGRaEAaH1mkv3Bbu6rYvLOpPh/RusSJXuKPEAoZ7L7gybZkchE8+NV5g9vKF4AGAtsA==
@@ -5997,6 +5997,13 @@ gatsby-page-utils@^0.0.28:
     micromatch "^3.1.10"
     slash "^3.0.0"
 
+gatsby-plugin-google-analytics@^2.1.24:
+  version "2.1.24"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.1.24.tgz#ab1aa59503d236d61873a1b14205976d89ddabb3"
+  integrity sha512-2kvz7KJr/Kp3ViC6BWpPT8lZAgT/5F6sfZ9UkoOKoGv3YBwEWbZxxBX1WAiLcpjFGbmaWrX8QhD7HXdaTMHCOg==
+  dependencies:
+    "@babel/runtime" "^7.6.3"
+
 gatsby-plugin-manifest@^2.2.26:
   version "2.2.26"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.26.tgz#040a7dc2ab54e64cc97481adfb498e5dc8caade4"
@@ -6244,10 +6251,10 @@ gatsby-telemetry@^1.1.35:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-theme-catalyst-core@^0.12.2:
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-core/-/gatsby-theme-catalyst-core-0.12.2.tgz#8e1437f44f4884388fd5619acc96c2ceae15c6da"
-  integrity sha512-I4Cy4ooMcEB07ivuOd06/ZkVdDXGYv+XCkKEOA4wSzLgHEpHIzHWV5mFnOZ5c32NSg/gYFrZOyFcBIgq1K1LwA==
+gatsby-theme-catalyst-core@^0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-core/-/gatsby-theme-catalyst-core-0.13.1.tgz#22a2973bb296f12b1abe175ae2d01f16972d7ff1"
+  integrity sha512-sT2jZvFzygKbCYKA8j/9QfLFbNw/tdAL5RY+EEsz6AbLoDfY+P+Yb6MG7NygKvA7rvoL/e2kAgYIMQWvXxp+vQ==
   dependencies:
     "@emotion/core" "^10.0.22"
     "@mdx-js/mdx" "^1.5.1"
@@ -6275,6 +6282,20 @@ gatsby-theme-catalyst-core@^0.12.2:
     react-scroll "^1.7.14"
     remark-slug "^5.1.2"
     theme-ui "^0.2.46"
+
+gatsby-theme-catalyst-footer-basic@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-footer-basic/-/gatsby-theme-catalyst-footer-basic-0.0.3.tgz#7a0fc3a5f5c1d090f3b41cdb708d3357d08243cd"
+  integrity sha512-OejvVsWvT1gWqQk8UC/JNkQfvkEgKFhhwkjfPY0WaVVE4pLjkyUxrc5CqMJfLiwRpLbBj90UKD7Qsn6e0oXJcw==
+  dependencies:
+    gatsby-theme-catalyst-core "^0.13.1"
+
+gatsby-theme-catalyst-header-basic@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-header-basic/-/gatsby-theme-catalyst-header-basic-0.0.3.tgz#05ce24aa86cf32b02f51ee4ef87ac74529f9885e"
+  integrity sha512-lKI3EXRxZuZdk5sD8kQ4h9khgmLBsP7qYf9rwI4M1Rap8Lt5WJtvd+g3bBxV+XcB+jq5rXT4B3DoMLfF/QOVbg==
+  dependencies:
+    gatsby-theme-catalyst-core "^0.13.1"
 
 gatsby-transformer-sharp@^2.3.2:
   version "2.3.2"
@@ -11206,14 +11227,6 @@ react-side-effect@^1.1.0:
   integrity sha512-v1ht1aHg5k/thv56DRcjw+WtojuuDHFUgGfc+bFHOWsF4ZK6C2V57DO0Or0GPsg6+LSTE0M6Ry/gfzhzSwbc5w==
   dependencies:
     shallowequal "^1.0.1"
-
-react-spring@^8.0.27:
-  version "8.0.27"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.27.tgz#97d4dee677f41e0b2adcb696f3839680a3aa356a"
-  integrity sha512-nDpWBe3ZVezukNRandTeLSPcwwTMjNVu1IDq9qA/AMiUqHuRN4BeSWvKr3eIxxg1vtiYiOLy4FqdfCP5IoP77g==
-  dependencies:
-    "@babel/runtime" "^7.3.1"
-    prop-types "^15.5.8"
 
 react@^16.11.0:
   version "16.11.0"

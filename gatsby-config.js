@@ -6,40 +6,32 @@ module.exports = {
     description: `Alberta based freelance writer and essayist focused on health, LGBTQ2S+, parenting, and the environment.`,
     author: `Eric Howey`,
     siteUrl: `https://www.briannasharpe.com`, //Change to you site address, required for sitemap.xml and robots.txt file
-    pageLinks: [
+    menuLinks: [
       {
         name: `Published Work`,
         link: `/work`,
+        type: `internal`,
       },
       {
         name: `Bio`,
         link: `/bio`,
+        type: `internal`,
       },
       {
         name: `Contact`,
         link: `/contact`,
-      },
-    ],
-    // Necessary to not throw a build error, anchorlinks are unused.
-    anchorLinks: [
-      {
-        name: `Anchor 1`,
-        link: `#anchor1`,
-      },
-      {
-        name: `Anchor 2`,
-        link: `#anchor2`,
+        type: `internal`,
       },
     ],
     socialLinks: [
       {
         name: `Email`,
-        url: `sharpe.brianna@gmail.com`,
+        link: `sharpe.brianna@gmail.com`,
         location: `footer`, //Options are "all", "header", "footer"
       },
       {
         name: `Twitter`,
-        url: `https://www.twitter.com/sharpe_bri`,
+        link: `https://www.twitter.com/sharpe_bri`,
         location: `all`, //Options are "all", "header", "footer"
       },
     ],
@@ -48,9 +40,12 @@ module.exports = {
     {
       resolve: `gatsby-theme-catalyst-core`,
       options: {
+        useHero: true,
         displaySiteLogo: false,
       },
     },
+    `gatsby-theme-catalyst-header-basic`,
+    `gatsby-theme-catalyst-footer-basic`,
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-sanity`,

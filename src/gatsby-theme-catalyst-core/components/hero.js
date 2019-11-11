@@ -25,9 +25,7 @@ const SiteWelcome = () => {
       window.matchMedia("(orientation: portrait)").matches &&
       window.matchMedia("(min-width: 768px)").matches
     ) {
-      return "60vh"
-    } else if (window.matchMedia("(min-width: 768px)").matches) {
-      return "100vh"
+      return "50vh"
     } else {
       return "auto"
     }
@@ -50,7 +48,7 @@ const SiteWelcome = () => {
           height: welcomeHeight,
           backgroundColor: "accent",
           px: 3,
-          py: [5, null, null, 0, null],
+          py: 5,
         }}
       >
         <div
