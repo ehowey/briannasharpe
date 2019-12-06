@@ -3,7 +3,7 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Brianna Sharpe`,
-    description: `Alberta based freelance writer and essayist focused on health, LGBTQ2S+, parenting, and the environment.`,
+    description: `Alberta based freelance writer and journalist focused on health, LGBTQ2S+, parenting, and the environment.`,
     author: `Eric Howey`,
     siteUrl: `https://www.briannasharpe.com`, //Change to you site address, required for sitemap.xml and robots.txt file
     menuLinks: [
