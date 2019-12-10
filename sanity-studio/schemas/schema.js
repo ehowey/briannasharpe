@@ -5,9 +5,16 @@ import createSchema from "part:@sanity/base/schema-creator"
 import schemaTypes from "all:part:@sanity/base/schema-type"
 
 // We import object and document schemas
-import category from "./category"
+import categories from "./categories"
 import work from "./work"
 import logos from "./logos"
+import homePage from "./homePage"
+import workPage from "./workPage"
+import bioPage from "./bioPage"
+import contactPage from "./contactPage"
+import blockContent from "./blockContent"
+import figure from "./figure"
+import figureWide from "./figureWide"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -19,7 +26,14 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     work,
-    category,
+    categories,
     logos,
+    homePage,
+    workPage,
+    bioPage,
+    contactPage,
+    blockContent,
+    figure,
+    figureWide,
   ]),
 })

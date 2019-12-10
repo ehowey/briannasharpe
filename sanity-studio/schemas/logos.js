@@ -1,6 +1,6 @@
 export default {
   name: "logos",
-  title: "Logos",
+  title: "Publisher Logos",
   type: "document",
   fields: [
     {
@@ -12,7 +12,7 @@ export default {
       }
     },
     {
-      title: "Alt Text - Logo Title",
+      title: "Logo Title - Alt Text",
       name: "altText",
       type: "string"
     },
