@@ -6393,10 +6393,10 @@ gatsby-theme-catalyst-header-basic@^0.2.2:
   resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-header-basic/-/gatsby-theme-catalyst-header-basic-0.2.2.tgz#a76d8948fae5036384850062df4776b7053be907"
   integrity sha512-KcO1lT5OTE6fJQlZATYrU6pwGlOI0DU95vGDNMAmaajbCqZK4G7Ee4nYpeO6CxBXCGLNyD4Zx6r0MJ8JeLM7BQ==
 
-gatsby-theme-catalyst-writer@0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-writer/-/gatsby-theme-catalyst-writer-0.3.2.tgz#63c6bc71792ab7d72bc059f8a3d8870822369ed1"
-  integrity sha512-wymnwHHignPklZfwM1pJEkCrBb+hzq77GJsVZViS1aVewXtXsjpDZMwi3hBPWcvSdW7xgypBeLsIVMrXORIcdw==
+gatsby-theme-catalyst-writer@0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-writer/-/gatsby-theme-catalyst-writer-0.3.3.tgz#b99ba3dfcf588c3aecddfffe130c04eb8644d4e0"
+  integrity sha512-gAfKy2O8fcc1aD7+EWHQIN0FH7ytP/pPlpzcn2wHedvBcVC+epCq2P3iwxSYQ8kgDFAFlb5vE0dFiGpCte2Evg==
   dependencies:
     "@sanity/block-content-to-react" "^2.0.7"
     gatsby-source-sanity "^5.0.4"

@@ -1,18 +1,24 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { useContext } from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { NavContext } from "gatsby-theme-catalyst-core"
 import { HomeContext } from "gatsby-theme-catalyst-core"
+import { ButtonPrimary } from "gatsby-theme-catalyst-writer"
+import { ButtonSecondary } from "gatsby-theme-catalyst-writer"
 
 const SiteWelcome = () => {
   const data = useStaticQuery(graphql`
     query {
-      hero: file(relativePath: { eq: "hero-person.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1024) {
-            ...GatsbyImageSharpFluid_withWebp
+      sanityHomePage {
+        heroTitle
+        heroText
+        heroImage {
+          asset {
+            fluid(maxWidth: 1024) {
+              ...GatsbySanityImageFluid
+            }
           }
         }
       }
@@ -33,6 +39,7 @@ const SiteWelcome = () => {
 
   const [isOpen] = useContext(NavContext)
   const [isHome] = useContext(HomeContext)
+  const hero = data.sanityHomePage
 
   if (isHome) {
     return (
@@ -41,7 +48,7 @@ const SiteWelcome = () => {
           gridRow: "1 / -1",
           gridColumn: "1 / -1",
           zIndex: "1",
-          display: isOpen ? "none" : "grid",
+          display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gridTemplateRows: "auto",
           gridGap: 3,
@@ -64,98 +71,25 @@ const SiteWelcome = () => {
         >
           <h1
             sx={{
-              fontSize: [6, null, null, 7, null],
+              fontSize: 6,
               fontFamily: "alt",
               fontWeight: "400",
               fontStyle: "italic",
             }}
           >
-            "Only connect" - E.M. Forster
+            {hero.heroTitle}
           </h1>
-          <p>
-            I’m an Alberta-based freelance writer who loves pulling at loose
-            threads to see what unravels — and then making sense of the mess. I
-            often cover climate, LGBTQ2S+ issues, mental health, and parenting,
-            but the threads can lead anywhere. You can find my work on HuffPost
-            Canada, TVO, The New York Times, Xtra, Today’s Parent, and more.
-          </p>
+          <p>{hero.heroText}</p>
           <div
             sx={{
               display: "grid",
-              gridTemplateColumns: "auto 1fr",
-              gridTemplateRows: "auto",
-              gridGap: ["1rem", null, null, "2rem", null],
-              pt: 3,
+              gridGap: [3, 4, null, null, null],
+              gridTemplateColumns: ["auto", "auto auto 1fr", null, null, null],
+              justifyItems: ["stretch", "start", null, null, null],
             }}
           >
-            <Link
-              sx={{
-                gridColumn: "1 / 2",
-                justifySelf: "start",
-                appearance: "none",
-                width: "auto",
-                bg: "primary",
-                color: "textWhite",
-                display: "inline-block",
-                textAlign: "center",
-                lineHeight: "inherit",
-                textDecoration: "none",
-                fontSize: "85%",
-                m: 0,
-                px: "0.8rem",
-                py: "0.5rem",
-                borderColor: "primary",
-                borderWidth: "2px",
-                borderStyle: "solid",
-                borderRadius: 4,
-                letterSpacing: "1px",
-                transition: "all 0.3s ease 0s",
-                "::after": {
-                  content: '"\\00A0 \\2192"',
-                },
-                ":hover": {
-                  bg: "secondary",
-                  borderColor: "secondary",
-                },
-              }}
-              to="/work"
-            >
-              Published Work
-            </Link>
-            <Link
-              sx={{
-                gridColumn: "2 / 3",
-                justifySelf: "start",
-                appearance: "none",
-                width: "auto",
-                bg: "transparent",
-                color: "primary",
-                display: "inline-block",
-                textAlign: "center",
-                lineHeight: "inherit",
-                textDecoration: "none",
-                fontSize: "85%",
-                m: 0,
-                px: "0.8rem",
-                py: "0.5rem",
-                borderColor: "primary",
-                borderWidth: "2px",
-                borderStyle: "solid",
-                borderRadius: 4,
-                letterSpacing: "1px",
-                transition: "all 0.3s ease 0s",
-                "::after": {
-                  content: '"\\00A0 \\2192"',
-                },
-                ":hover": {
-                  borderColor: "secondary",
-                  color: "secondary",
-                },
-              }}
-              to="/bio"
-            >
-              Bio
-            </Link>
+            <ButtonPrimary to="/work">Published Work</ButtonPrimary>
+            <ButtonSecondary to="/bio">Bio</ButtonSecondary>
           </div>
         </div>
 
@@ -170,7 +104,7 @@ const SiteWelcome = () => {
             opacity: ["0.2", null, null, "1", null],
             maxHeight: ["100vh", null, null, "70vh", null],
           }}
-          fluid={data.hero.childImageSharp.fluid}
+          fluid={hero.heroImage.asset.fluid}
           alt="Person with shapes and colors from head"
           imgStyle={{ objectFit: "contain" }}
           loading="eager"

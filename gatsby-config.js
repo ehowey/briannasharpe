@@ -56,7 +56,8 @@ module.exports = {
       resolve: `gatsby-theme-catalyst-core`,
       options: {
         useHero: true,
-        displaySiteLogo: false,
+        displaySiteTitle: false,
+        invertLogo: true,
       },
     },
     `gatsby-theme-catalyst-header-basic`,
