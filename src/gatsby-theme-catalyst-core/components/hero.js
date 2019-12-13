@@ -4,8 +4,8 @@ import { useContext } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { HomeContext } from "gatsby-theme-catalyst-core"
-import { ButtonPrimary } from "gatsby-theme-catalyst-writer"
-import { ButtonSecondary } from "gatsby-theme-catalyst-writer"
+import ButtonPrimary from "gatsby-theme-catalyst-writer/src/components/button-primary"
+import ButtonSecondary from "gatsby-theme-catalyst-writer/src/components/button-secondary"
 import SanityContent from "gatsby-theme-catalyst-writer/src/components/sanity/sanity-content"
 
 const SiteWelcome = () => {
