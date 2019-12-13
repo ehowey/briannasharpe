@@ -4,7 +4,22 @@ module.exports = {
   siteMetadata: {
     title: `Brianna Sharpe`,
     description: `Alberta based freelance writer and journalist focused on health, LGBTQ2S+, parenting, and the environment.`,
-    author: `Eric Howey`,
+    keywords: [
+      `writer`,
+      `journalist`,
+      `reporter`,
+      `alberta`,
+      `calgary`,
+      `essayist`,
+      `LGBTQ`,
+      `LGBTQ2S+`,
+      `health`,
+      `education`,
+      `environment`,
+      `parenting`,
+    ],
+    author: `Brianna Sharpe`,
+    twitter: `@sharpe_bri`,
     siteUrl: `https://www.briannasharpe.com`, //Change to you site address, required for sitemap.xml and robots.txt file
     menuLinks: [
       {
@@ -41,12 +56,19 @@ module.exports = {
       resolve: `gatsby-theme-catalyst-core`,
       options: {
         useHero: true,
-        displaySiteLogo: false,
+        displaySiteTitle: false,
+        invertSiteLogo: true,
       },
     },
     `gatsby-theme-catalyst-header-basic`,
     `gatsby-theme-catalyst-footer-basic`,
-    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-theme-catalyst-writer`,
+      options: {
+        sanityProjectID: process.env.SANITY_PROJECT_ID,
+        sanityDataset: process.env.SANITY_DATASET,
+      },
+    },
     {
       resolve: `gatsby-source-sanity`,
       options: {
@@ -71,7 +93,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#cccccc`,
         display: `minimal-ui`,
-        icon: `content/assets/logo-512.png`, // This path is relative to the root of the site.
+        icon: `content/assets/catalyst-icon.png`, // This path is relative to the root of the site.
       },
     },
   ],
