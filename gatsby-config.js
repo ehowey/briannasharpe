@@ -23,7 +23,7 @@ module.exports = {
     siteUrl: `https://www.briannasharpe.com`, //Change to you site address, required for sitemap.xml and robots.txt file
     menuLinks: [
       {
-        name: `Published Work`,
+        name: `Selected Work`,
         link: `/work`,
         type: `internal`,
       },

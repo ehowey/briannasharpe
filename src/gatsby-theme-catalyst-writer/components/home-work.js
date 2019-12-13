@@ -96,7 +96,7 @@ const FeaturedWork = () => {
               justifyItems: ["stretch", "start", null, null, null],
             }}
           >
-            <ButtonSecondary to="/work">More Published Work</ButtonSecondary>
+            <ButtonSecondary to="/work">More Writing</ButtonSecondary>
           </div>
         </div>
       </div>
