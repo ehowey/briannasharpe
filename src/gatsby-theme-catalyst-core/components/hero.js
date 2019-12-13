@@ -3,17 +3,17 @@ import { jsx } from "theme-ui"
 import { useContext } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import { NavContext } from "gatsby-theme-catalyst-core"
 import { HomeContext } from "gatsby-theme-catalyst-core"
 import { ButtonPrimary } from "gatsby-theme-catalyst-writer"
 import { ButtonSecondary } from "gatsby-theme-catalyst-writer"
+import SanityContent from "gatsby-theme-catalyst-writer/src/components/sanity/sanity-content"
 
 const SiteWelcome = () => {
   const data = useStaticQuery(graphql`
     query {
       sanityHomePage {
         heroTitle
-        heroText
+        _rawHeroText
         heroImage {
           asset {
             fluid(maxWidth: 1024) {
@@ -37,7 +37,6 @@ const SiteWelcome = () => {
     }
   }
 
-  const [isOpen] = useContext(NavContext)
   const [isHome] = useContext(HomeContext)
   const hero = data.sanityHomePage
 
@@ -79,7 +78,9 @@ const SiteWelcome = () => {
           >
             {hero.heroTitle}
           </h1>
-          <p>{hero.heroText}</p>
+          <div sx={{ mt: 0, mb: 4 }}>
+            <SanityContent data={hero._rawHeroText} />
+          </div>
           <div
             sx={{
               display: "grid",

@@ -57,7 +57,7 @@ module.exports = {
       options: {
         useHero: true,
         displaySiteTitle: false,
-        invertLogo: true,
+        invertSiteLogo: true,
       },
     },
     `gatsby-theme-catalyst-header-basic`,

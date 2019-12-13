@@ -77,7 +77,7 @@ export default {
         backgroundColor: "accent",
         width: "2rem",
         mr: 2,
-        mt: "5px",
+        mt: "8px",
       },
       "::after": {
         content: '""',
@@ -85,7 +85,7 @@ export default {
         height: "4px",
         backgroundColor: "accent",
         ml: 2,
-        mt: "5px",
+        mt: "8px",
         display: ["none", null, "inline", null, null],
       },
     },
@@ -142,6 +142,11 @@ export default {
         color: "inherit",
         p: 0,
       },
+    },
+  },
+  variants: {
+    main: {
+      mt: [0, null, 3, null, null], // Modified spacing from core theme
     },
   },
 }
