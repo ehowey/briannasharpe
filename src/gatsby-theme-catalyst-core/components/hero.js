@@ -89,7 +89,7 @@ const SiteWelcome = () => {
               justifyItems: ["stretch", "start", null, null, null],
             }}
           >
-            <ButtonPrimary to="/work">Selected Work</ButtonPrimary>
+            <ButtonPrimary to="/work">Published Work</ButtonPrimary>
             <ButtonSecondary to="/bio">Bio</ButtonSecondary>
           </div>
         </div>
