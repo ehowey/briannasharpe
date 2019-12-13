@@ -63,7 +63,7 @@ const FeaturedWork = () => {
             gridColumn: "1 / -1",
             gridRow: "1 / -1",
             zIndex: "1",
-            opacity: "0.2",
+            opacity: "0.5",
             display: ["none", "block", null, null, null],
           }}
           fluid={data.leaves.childImageSharp.fluid}

@@ -54,7 +54,8 @@ const SiteWelcome = () => {
           height: welcomeHeight,
           backgroundColor: "accent",
           px: 3,
-          py: 5,
+          pt: [0, null, null, 5, null],
+          pb: [4, null, null, 5, null],
         }}
       >
         <div
@@ -70,7 +71,7 @@ const SiteWelcome = () => {
         >
           <h1
             sx={{
-              fontSize: 6,
+              fontSize: [5, 6, null, null, null],
               fontFamily: "alt",
               fontWeight: "400",
               fontStyle: "italic",
@@ -103,7 +104,7 @@ const SiteWelcome = () => {
             width: "auto",
             zIndex: 1,
             opacity: ["0.2", null, null, "1", null],
-            maxHeight: ["100vh", null, null, "70vh", null],
+            maxHeight: ["auto", "80vh", "70vh", "70vh", null],
           }}
           fluid={hero.heroImage.asset.fluid}
           alt="Person with shapes and colors from head"
