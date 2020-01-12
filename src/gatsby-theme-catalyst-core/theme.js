@@ -42,12 +42,16 @@ export default {
     maxContentWidth: "720px", // Sets the container size on larger screens, e.g. tablets and laptops
     contentWidth: "90vw", // Sets the container width on smaller screens, results in a 5vw margin on the left and right
     headerHeight: "auto", // Provides fallback setting to control header height
-    logoWidthSmall: "225px", // Logo width on small screens, up to 768px
-    logoWidthMedium: "275px", // Logo width on medium screens, 768px - 1024px
-    logoWidthLarge: "300px", // Logo width on large screens, above 1024px
-    logoHeightSmall: "45px", // Logo height on small screens, up to 768px
-    logoHeightMedium: "55px", // Logo width on medium screens, 768px - 1024px
-    logoHeightLarge: "60px", // Logo width on large screens, above 1024px
+    logoWidthXS: "225px", // Logo width on extra small screens, up to 480px
+    logoWidthS: "225px", // Logo width on small screens, 480px - 768px
+    logoWidthM: "275px", // Logo width on medium screens, 768px - 1024px
+    logoWidthL: "300px", // Logo width on large screens, 1024px - 1440px
+    logoWidthXL: "300px", // Logo width on extra large screens, above 1440px
+    logoHeightXS: "45px", // Logo height on extra small screens, up to 480px
+    logoHeightS: "45px", // Logo height on small screens, 480px - 768px
+    logoHeightM: "55px", // Logo height on medium screens, 768px - 1024px
+    logoHeightL: "60px", // Logo height on large screens, 1024px - 1440px
+    logoHeightXL: "60px", // Logo height on extra large screens, above 1440px
     iconsFooter: "32px", // Sets the icons size for the footer
     iconsHeader: "20px", // Sets the icons size for the header
   },

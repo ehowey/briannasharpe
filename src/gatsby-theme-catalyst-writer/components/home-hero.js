@@ -37,11 +37,16 @@ const SiteWelcome = () => {
     }
   }
 
-  const [isHome] = useContext(HomeContext)
   const hero = data.sanityHomePage
-
-  if (isHome) {
-    return (
+  return (
+    <section
+      sx={{
+        width: "100vw",
+        position: "relative",
+        left: "calc(-50vw + 50%)",
+        mt: -3,
+      }}
+    >
       <div
         sx={{
           gridRow: "1 / -1",
@@ -112,10 +117,8 @@ const SiteWelcome = () => {
           loading="eager"
         />
       </div>
-    )
-  } else {
-    return null
-  }
+    </section>
+  )
 }
 
 export default SiteWelcome
