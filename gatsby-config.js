@@ -55,14 +55,14 @@ module.exports = {
     {
       resolve: `gatsby-theme-catalyst-core`,
       options: {
-        useHero: true,
         displaySiteTitle: false,
+        displaySiteTitleMobile: false,
         invertSiteLogo: true,
         useColorMode: false,
       },
     },
-    `gatsby-theme-catalyst-header-basic`,
-    `gatsby-theme-catalyst-footer-basic`,
+    `gatsby-theme-catalyst-header-top`,
+    `gatsby-theme-catalyst-footer`,
     {
       resolve: `gatsby-theme-catalyst-writer`,
       options: {
