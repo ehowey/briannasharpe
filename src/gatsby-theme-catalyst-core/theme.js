@@ -19,15 +19,16 @@ export default {
     secondary: "#cba654",
     accent: "#eed4cc",
     muted: "#FFF2FC",
+    text: baseColors.gray[8],
     textWhite: baseColors.gray[1],
     header: {
       background: "transparent",
       backgroundOpen: "#3e5a70",
-      text: "#333333",
-      textOpen: "#ffffff",
-      icons: "#333333",
-      iconsHover: "#48487A",
-      iconsOpen: "#ffffff",
+      text: baseColors.gray[8],
+      textOpen: baseColors.gray[1],
+      icons: baseColors.gray[7],
+      iconsHover: "#cba654",
+      iconsOpen: baseColors.gray[1],
     },
     footer: {
       background: "#eed4cc",
@@ -148,9 +149,6 @@ export default {
     },
   },
   variants: {
-    main: {
-      mt: [0, null, 3, null, null], // Modified spacing from core theme
-    },
     contentContainer: {
       mt: 0,
     },

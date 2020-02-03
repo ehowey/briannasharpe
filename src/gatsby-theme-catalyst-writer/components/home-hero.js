@@ -42,7 +42,6 @@ const SiteWelcome = () => {
         width: "100vw",
         position: "relative",
         left: "calc(-50vw + 50%)",
-        mt: -3,
       }}
     >
       <div
