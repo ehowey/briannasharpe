@@ -94,6 +94,7 @@ const FeaturedWork = () => {
             sx={{
               display: "grid",
               justifyItems: ["stretch", "start", null, null, null],
+              mx: [3, 3, 0, null, null],
             }}
           >
             <ButtonSecondary to="/work">More Writing</ButtonSecondary>
