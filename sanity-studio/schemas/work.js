@@ -6,7 +6,8 @@ export default {
     {
       name: "title",
       title: "Title",
-      type: "string"
+      type: "string",
+      validation: Rule => Rule.required(),
     },
     {
       name: "slug",
@@ -14,72 +15,78 @@ export default {
       type: "slug",
       options: {
         source: "title",
-        maxLength: 96
-      }
+        maxLength: 96,
+      },
+      validation: Rule => Rule.required(),
     },
     {
       name: "date",
       title: "Publication Date",
       type: "date",
       options: {
-        dateFormat: "MMMM Do, YYYY"
-      }
+        dateFormat: "MMMM Do, YYYY",
+      },
+      validation: Rule => Rule.required(),
     },
     {
       name: "publisher",
       title: "Publisher",
-      type: "string"
+      type: "string",
+      validation: Rule => Rule.required(),
     },
     {
       name: "link",
       title: "Link",
-      type: "url"
+      type: "url",
+      validation: Rule => Rule.required(),
     },
     {
       name: "categories",
       title: "Categories",
       type: "array",
-      of: [{ type: "reference", to: { type: "categories" } }]
+      of: [{ type: "reference", to: { type: "categories" } }],
+      validation: Rule => Rule.required(),
     },
     {
       title: "Include in selected published work?",
       name: "include",
-      type: "boolean"
+      type: "boolean",
     },
     {
       title: "Featured on front page?",
+      description: "Remember to set an excerpt and image if this is true.",
       name: "featured",
-      type: "boolean"
+      type: "boolean",
     },
     {
       title: "Excerpt",
       name: "excerpt",
       type: "text",
-      rows: 4
+      rows: 4,
     },
     {
       title: "Image",
       name: "image",
       type: "image",
       options: {
-        hotspot: true // <-- Defaults to false
-      }
-    }
+        hotspot: true, // <-- Defaults to false
+      },
+    },
   ],
 
   preview: {
     select: {
       title: "title",
       date: "date",
-      publisher: "publisher"
+      publisher: "publisher",
     },
     prepare(selection) {
-      const { title, publisher, date } = selection;
+      const { title, publisher, date } = selection
       return {
         title: title,
         subtitle: publisher,
-        subtitle: date
-      };
-    }
-  }
-};
+        subtitle: date,
+      }
+    },
+  },
+}
