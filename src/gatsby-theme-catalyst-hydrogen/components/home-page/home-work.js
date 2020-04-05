@@ -3,8 +3,8 @@ import { jsx, Styled } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import { Fragment } from "react"
 import Img from "gatsby-image"
-import Card from "gatsby-theme-catalyst-writer/src/components/work-card"
-import ButtonSecondary from "gatsby-theme-catalyst-writer/src/components/button-secondary"
+import Card from "gatsby-theme-catalyst-hydrogen/src/components/home-page/home-card"
+import ButtonSecondary from "gatsby-theme-catalyst-hydrogen/src/components/button-secondary"
 
 const FeaturedWork = () => {
   const data = useStaticQuery(graphql`
@@ -79,7 +79,7 @@ const FeaturedWork = () => {
             gridRow: "1 / -1",
           }}
         >
-          {writing.map(published => (
+          {writing.map((published) => (
             <Card
               title={published.title}
               link={published.link}

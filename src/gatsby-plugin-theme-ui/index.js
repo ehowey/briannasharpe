@@ -9,9 +9,6 @@ export default {
   fonts: {
     ...tailwind.fonts,
     heading: '"Playfair Display", sans-serif',
-    siteTitle: "inherit",
-    navLinks: '"Playfair Display", sans-serif',
-    alt: '"Playfair Display", sans-serif',
   },
   colors: {
     ...tailwind.colors,
@@ -152,12 +149,65 @@ export default {
     contentContainer: {
       mt: 0,
     },
-    navLinkStyles: {
-      "a::after": {
-        backgroundColor: "secondary",
+    siteTitle: {
+      fontSize: [4, null, null, 5, null],
+      "::after": {
+        display: "none",
       },
-      ".active::after": {
+    },
+    navLink: {
+      fontFamily: '"Playfair Display", sans-serif',
+      "::after": {
+        position: "absolute",
+        top: "100%",
+        left: "0",
+        width: "100%",
+        height: "1px",
         backgroundColor: "secondary",
+        content: "''",
+        opacity: "0",
+        transition: "height 0.3s, opacity 0.3s, transform 0.3s",
+        transform: "translateY(-6px)",
+      },
+      ":hover, :focus, :active": {
+        textDecoration: "none",
+      },
+      ":hover::after, :active::after, :focus::after": {
+        height: "4px",
+        opacity: "1",
+        transform: "translateY(0px)",
+      },
+    },
+    navLinkActive: {
+      textDecoration: "none",
+      "::after": {
+        position: "absolute",
+        top: "100%",
+        left: "0",
+        width: "100%",
+        height: "4px",
+        backgroundColor: "secondary",
+        content: "''",
+        opacity: "1",
+        transform: "translateY(0px)",
+      },
+    },
+    navLinkSub: {
+      "::after": {
+        content: "none",
+      },
+      ":hover::after": {
+        content: "none",
+      },
+      ":hover, :focus, :active": {
+        color: "primary",
+      },
+    },
+    navLinkSubActive: {
+      textDecoration: "none",
+      color: "primary",
+      "::after": {
+        content: "none",
       },
     },
   },

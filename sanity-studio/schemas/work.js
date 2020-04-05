@@ -54,18 +54,20 @@ export default {
     },
     {
       title: "Featured on front page?",
-      description: "Remember to set an excerpt and image if this is true.",
+      description: "Remember to set an excerpt and image.",
       name: "featured",
       type: "boolean",
     },
     {
       title: "Excerpt",
+      description: "Only required if displayed on front page.",
       name: "excerpt",
       type: "text",
       rows: 4,
     },
     {
       title: "Image",
+      description: "Only required if displayed on front page.",
       name: "image",
       type: "image",
       options: {

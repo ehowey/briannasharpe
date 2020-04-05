@@ -19,11 +19,6 @@ export default {
           .integer()
           .positive(),
     },
-    {
-      name: "description",
-      title: "Description",
-      type: "text",
-    },
   ],
   orderings: [
     {

@@ -8,23 +8,26 @@ export default {
       name: "logo",
       type: "image",
       options: {
-        hotspot: true // <-- Defaults to false
-      }
+        hotspot: true, // <-- Defaults to false
+      },
+      validation: Rule => Rule.required(),
     },
     {
       title: "Logo Title - Alt Text",
       name: "altText",
-      type: "string"
+      type: "string",
+      validation: Rule => Rule.required(),
     },
     {
       title: "Link To",
       name: "link",
-      type: "url"
+      type: "url",
+      validation: Rule => Rule.required(),
     },
     {
       title: "Featured on front page?",
       name: "featured",
-      type: "boolean"
-    }
-  ]
-};
+      type: "boolean",
+    },
+  ],
+}

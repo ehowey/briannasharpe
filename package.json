@@ -1,22 +1,18 @@
 {
   "name": "briannasharpe",
   "description": "Website for briannasharpe.com",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "author": "Eric Howey <eric@erichowey.dev>",
   "dependencies": {
-    "gatsby": "^2.19.35",
-    "gatsby-source-sanity": "^5.0.6",
-    "gatsby-theme-catalyst-core": "^0.25.1",
-    "gatsby-theme-catalyst-writer": "^0.8.1",
-    "gatsby-theme-catalyst-header-top": "^0.4.1",
-    "gatsby-theme-catalyst-footer": "^0.2.3",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
+    "gatsby": "^2.20.10",
+    "gatsby-theme-catalyst-hydrogen": "^1.0.0-alpha.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "typeface-playfair-display": "^1.1.4"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^2.0.2"
   },
   "keywords": [
     "gatsby"

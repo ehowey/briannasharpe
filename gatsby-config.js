@@ -53,29 +53,20 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-theme-catalyst-hydrogen`,
+      options: {
+        sanityProjectId: process.env.SANITY_PROJECT_ID,
+        sanityDataset: process.env.SANITY_DATASET,
+        sanityToken: process.env.SANITY_TOKEN,
+      },
+    },
+    {
       resolve: `gatsby-theme-catalyst-core`,
       options: {
         displaySiteTitle: false,
         displaySiteTitleMobile: false,
         invertSiteLogo: true,
         useColorMode: false,
-      },
-    },
-    `gatsby-theme-catalyst-header-top`,
-    `gatsby-theme-catalyst-footer`,
-    {
-      resolve: `gatsby-theme-catalyst-writer`,
-      options: {
-        sanityProjectID: process.env.SANITY_PROJECT_ID,
-        sanityDataset: process.env.SANITY_DATASET,
-      },
-    },
-    {
-      resolve: `gatsby-source-sanity`,
-      options: {
-        projectId: process.env.SANITY_PROJECT_ID,
-        dataset: process.env.SANITY_DATASET,
-        token: process.env.SANITY_TOKEN,
       },
     },
     {

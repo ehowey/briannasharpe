@@ -2,9 +2,9 @@
 import { jsx } from "theme-ui"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import ButtonPrimary from "gatsby-theme-catalyst-writer/src/components/button-primary"
-import ButtonSecondary from "gatsby-theme-catalyst-writer/src/components/button-secondary"
-import SanityContent from "gatsby-theme-catalyst-writer/src/components/sanity/sanity-content"
+import ButtonPrimary from "gatsby-theme-catalyst-hydrogen/src/components/button-primary"
+import ButtonSecondary from "gatsby-theme-catalyst-hydrogen/src/components/button-secondary"
+import { SanityContent } from "gatsby-theme-catalyst-sanity"
 
 const SiteWelcome = () => {
   const data = useStaticQuery(graphql`

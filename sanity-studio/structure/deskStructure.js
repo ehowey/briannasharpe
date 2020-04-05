@@ -1,24 +1,30 @@
 import S from "@sanity/desk-tool/structure-builder"
 import {
-  MdInsertDriveFile,
   MdSettings,
   MdShare,
   MdList,
   MdInfo,
+  MdHome,
+  MdInsertDriveFile,
+  MdPerson,
+  MdDashboard,
 } from "react-icons/lib/md"
 
-const hiddenDocTypes = listItem =>
+const hiddenDocTypes = (listItem) =>
   ![
-    "homePage",
-    "workPage",
-    "bioPage",
-    "contactPage",
-    "work",
-    "logos",
-    "categories",
     "siteSettings",
     "menuLink",
     "socialLink",
+    "project",
+    "post",
+    "homePage",
+    "work",
+    "categories",
+    "logos",
+    "page",
+    "theme",
+    "workPage",
+    "author",
   ].includes(listItem.getId())
 
 export default () =>
@@ -42,6 +48,10 @@ export default () =>
                     .documentId("siteSettings")
                 ),
               S.listItem()
+                .title("Authors")
+                .icon(MdPerson)
+                .child(S.documentTypeList("author").title("Author")),
+              S.listItem()
                 .title("Navigation Links")
                 .icon(MdList)
                 .child(
@@ -57,11 +67,21 @@ export default () =>
       // Add a visual divider (optional)
       S.divider(),
       S.listItem()
-        .title("Published Work")
+        .title("Home Page")
+        .icon(MdHome)
+        .child(S.editor().schemaType("homePage").documentId("homePage")),
+      S.listItem()
+        .title("Work")
         .child(
           S.list()
-            .title("Published Work")
+            .title("Work")
             .items([
+              S.listItem()
+                .title("Work Page")
+                .icon(MdInsertDriveFile)
+                .child(
+                  S.editor().schemaType("workPage").documentId("workPage")
+                ),
               S.listItem()
                 .title("List of Work")
                 .schemaType("work")
@@ -71,50 +91,14 @@ export default () =>
                 .schemaType("categories")
                 .child(S.documentTypeList("categories").title("Categories")),
               S.listItem()
-                .title("Publisher Logos")
+                .title("Featured Logos")
                 .schemaType("logos")
                 .child(S.documentTypeList("logos").title("Publisher Logos")),
             ])
         ),
       S.listItem()
-        .title("Website Pages")
-        .child(
-          S.list()
-            .title("Pages")
-            .items([
-              S.listItem()
-                .title("Home Page")
-                .icon(MdInsertDriveFile)
-                .child(
-                  S.editor()
-                    .schemaType("homePage")
-                    .documentId("homePage")
-                ),
-              S.listItem()
-                .title("Work Page")
-                .icon(MdInsertDriveFile)
-                .child(
-                  S.editor()
-                    .schemaType("workPage")
-                    .documentId("workPage")
-                ),
-              S.listItem()
-                .title("Bio Page")
-                .icon(MdInsertDriveFile)
-                .child(
-                  S.editor()
-                    .schemaType("bioPage")
-                    .documentId("bioPage")
-                ),
-              S.listItem()
-                .title("Contact Page")
-                .icon(MdInsertDriveFile)
-                .child(
-                  S.editor()
-                    .schemaType("contactPage")
-                    .documentId("contactPage")
-                ),
-            ])
-        ),
+        .title("Pages")
+        .child(S.documentTypeList("page").title("Pages")),
+
       ...S.documentTypeListItems().filter(hiddenDocTypes),
     ])
