@@ -61,6 +61,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-theme-catalyst-core`,
+      options: {
+        displaySiteTitle: false,
+        displaySiteTitleMobile: false,
+        invertSiteLogo: true,
+        useColorMode: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Brianna Sharpe`,
