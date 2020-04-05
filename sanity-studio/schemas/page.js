@@ -1,6 +1,6 @@
 export default {
-  name: "workPage",
-  title: "Work Page",
+  name: "page",
+  title: "Page",
   type: "document",
   fields: [
     {
@@ -10,7 +10,6 @@ export default {
     },
     {
       name: "slug",
-      description: "This will be the link used for your site, e.g. work",
       title: "Slug",
       type: "slug",
       options: {
@@ -25,8 +24,6 @@ export default {
     },
     {
       name: "body",
-      description:
-        "This will appear before your selected work section, leave blank if you want.",
       title: "Body",
       type: "blockContent",
     },

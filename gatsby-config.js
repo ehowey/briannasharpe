@@ -53,29 +53,11 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-theme-catalyst-core`,
+      resolve: `gatsby-theme-catalyst-hydrogen`,
       options: {
-        displaySiteTitle: false,
-        displaySiteTitleMobile: false,
-        invertSiteLogo: true,
-        useColorMode: false,
-      },
-    },
-    `gatsby-theme-catalyst-header-top`,
-    `gatsby-theme-catalyst-footer`,
-    {
-      resolve: `gatsby-theme-catalyst-writer`,
-      options: {
-        sanityProjectID: process.env.SANITY_PROJECT_ID,
+        sanityProjectId: process.env.SANITY_PROJECT_ID,
         sanityDataset: process.env.SANITY_DATASET,
-      },
-    },
-    {
-      resolve: `gatsby-source-sanity`,
-      options: {
-        projectId: process.env.SANITY_PROJECT_ID,
-        dataset: process.env.SANITY_DATASET,
-        token: process.env.SANITY_TOKEN,
+        sanityToken: process.env.SANITY_TOKEN,
       },
     },
     {

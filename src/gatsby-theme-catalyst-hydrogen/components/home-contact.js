@@ -3,7 +3,7 @@ import { jsx, Styled } from "theme-ui"
 import { Fragment } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import SanityContent from "gatsby-theme-catalyst-writer/src/components/sanity/sanity-content"
+import SanityContent from "gatsby-theme-catalyst-hydrogen"
 
 const HomeContact = () => {
   const data = useStaticQuery(graphql`
