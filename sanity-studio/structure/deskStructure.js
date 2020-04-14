@@ -71,17 +71,15 @@ export default () =>
         .icon(MdHome)
         .child(S.editor().schemaType("homePage").documentId("homePage")),
       S.listItem()
+        .title("Work Page")
+        .icon(MdInsertDriveFile)
+        .child(S.editor().schemaType("workPage").documentId("workPage")),
+      S.listItem()
         .title("Work")
         .child(
           S.list()
             .title("Work")
             .items([
-              S.listItem()
-                .title("Work Page")
-                .icon(MdInsertDriveFile)
-                .child(
-                  S.editor().schemaType("workPage").documentId("workPage")
-                ),
               S.listItem()
                 .title("List of Work")
                 .schemaType("work")
@@ -97,7 +95,7 @@ export default () =>
             ])
         ),
       S.listItem()
-        .title("Pages")
+        .title("Other Pages")
         .child(S.documentTypeList("page").title("Pages")),
 
       ...S.documentTypeListItems().filter(hiddenDocTypes),

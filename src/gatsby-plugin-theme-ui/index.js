@@ -146,8 +146,9 @@ export default {
     },
   },
   variants: {
-    contentContainer: {
+    main: {
       mt: 0,
+      mb: 5,
     },
     siteTitle: {
       fontSize: [4, null, null, 5, null],
