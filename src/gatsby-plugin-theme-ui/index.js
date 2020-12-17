@@ -62,6 +62,13 @@ export default {
       lineHeight: "body",
       fontSize: 2,
     },
+    a: {
+      color: "primary",
+      transition: "all 0.3s ease",
+      ":hover": {
+        color: "secondary",
+      },
+    },
     h1: {
       fontFamily: "heading",
       fontWeight: "heading",
