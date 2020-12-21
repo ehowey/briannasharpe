@@ -69,6 +69,7 @@ module.exports = {
         useColorMode: false,
       },
     },
+    `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
