@@ -29,13 +29,15 @@ const SiteBranding = () => {
           sx={{
             height: ["45px", null, "55px", "60px", null],
             width: ["225px", null, "275px", "300px", null],
-            filter: isNavOpen ? "invert(1)" : "none",
             variant: "variants.siteLogo",
           }}
           alt={title}
           objectFit="contain"
           loading="eager"
-          imgStyle={{ objectFit: "contain" }}
+          imgStyle={{
+            objectFit: "contain",
+            filter: isNavOpen ? "invert(1)" : "none",
+          }}
         />
       </Link>
     </div>
