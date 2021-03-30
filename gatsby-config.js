@@ -58,14 +58,6 @@ module.exports = {
         sanityProjectId: process.env.SANITY_PROJECT_ID,
         sanityDataset: process.env.SANITY_DATASET,
         sanityToken: process.env.SANITY_TOKEN,
-      },
-    },
-    {
-      resolve: `gatsby-theme-catalyst-core`,
-      options: {
-        displaySiteTitle: false,
-        displaySiteTitleMobile: false,
-        invertSiteLogo: true,
         useColorMode: false,
       },
     },

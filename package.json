@@ -5,12 +5,12 @@
   "private": true,
   "author": "Eric Howey <eric@erichowey.dev>",
   "dependencies": {
-    "gatsby": "^2.29.1",
-    "gatsby-plugin-netlify": "^2.8.0",
+    "gatsby": "^3.1.2",
+    "gatsby-plugin-netlify": "^3.1.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-theme-catalyst-hydrogen": "^5.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "gatsby-theme-catalyst-hydrogen": "^6.0.0-alpha.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "typeface-playfair-display": "^1.1.13"
   },
   "devDependencies": {

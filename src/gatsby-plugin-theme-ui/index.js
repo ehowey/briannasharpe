@@ -37,18 +37,7 @@ export default {
   sizes: {
     ...tailwind.sizes,
     maxPageWidth: "1440px", // Sets the max width of elements like the header/footer on really large screens
-    maxContentWidth: "720px", // Sets the container size on larger screens, e.g. tablets and laptops
-    headerHeight: "auto", // Provides fallback setting to control header height
-    logoWidthXS: "225px", // Logo width on extra small screens, up to 480px
-    logoWidthS: "225px", // Logo width on small screens, 480px - 768px
-    logoWidthM: "275px", // Logo width on medium screens, 768px - 1024px
-    logoWidthL: "300px", // Logo width on large screens, 1024px - 1440px
-    logoWidthXL: "300px", // Logo width on extra large screens, above 1440px
-    logoHeightXS: "45px", // Logo height on extra small screens, up to 480px
-    logoHeightS: "45px", // Logo height on small screens, 480px - 768px
-    logoHeightM: "55px", // Logo height on medium screens, 768px - 1024px
-    logoHeightL: "60px", // Logo height on large screens, 1024px - 1440px
-    logoHeightXL: "60px", // Logo height on extra large screens, above 1440px
+    maxContentWidth: "60ch", // Sets the container size on larger screens, e.g. tablets and laptops
     iconsFooter: "32px", // Sets the icons size for the footer
     iconsHeader: "20px", // Sets the icons size for the header
   },
