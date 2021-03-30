@@ -7059,10 +7059,10 @@ gatsby-telemetry@^2.1.0:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-gatsby-theme-catalyst-core@^6.0.0-alpha.9:
-  version "6.0.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-core/-/gatsby-theme-catalyst-core-6.0.0-alpha.9.tgz#d71a99e846dd85a0c16ecbe06d340f4cc5128f37"
-  integrity sha512-Oay6YvHRDRnrERYxuIrq7tFCA5B/yVFeH2N4/xFs3hQEa3NVa8P/oVj8hTHofSUrhQspK4jGeMgP1v3xaCXRwg==
+gatsby-theme-catalyst-core@^6.0.0-alpha.10:
+  version "6.0.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-core/-/gatsby-theme-catalyst-core-6.0.0-alpha.10.tgz#00ab687f48f8706d7af704e18d2432c503f2ff7b"
+  integrity sha512-rqNmRBQYnsbERKruItKso3KMlQDSQEvEhL0jrEURfbQ5TDYWCcqc1EGlai096OgQLyrzC9iJQnQeCLU8rm4d3w==
   dependencies:
     "@mdx-js/mdx" "^1.6.22"
     "@mdx-js/react" "^1.6.22"
@@ -7107,30 +7107,30 @@ gatsby-theme-catalyst-core@^6.0.0-alpha.9:
     remark-slug "^6.0.0"
     theme-ui "^0.6.0"
 
-gatsby-theme-catalyst-footer@^6.0.0-alpha.9:
-  version "6.0.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-footer/-/gatsby-theme-catalyst-footer-6.0.0-alpha.9.tgz#fae508b84b30ea44875076da47f6188c5c31ae4c"
-  integrity sha512-kY5iZyQGDHVJnKDLDQrkMBt5IkAslioEtiYUEqmtS+SS5Q7atXXIm42fsYO6DjEeZdvmUi9Ixe7QJo44+aJJdA==
+gatsby-theme-catalyst-footer@^6.0.0-alpha.10:
+  version "6.0.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-footer/-/gatsby-theme-catalyst-footer-6.0.0-alpha.10.tgz#eb1d57fb0de5ac6da01db1cb82276f560a97f3ac"
+  integrity sha512-um7HR0CMe2Mwiw7/m9+8jreNJgGhkfx5CYsqLH3wCjUn8jZhE3MTqfrUEcg3e5IPGhfkAQYMqWdSehgNa9qOhg==
 
-gatsby-theme-catalyst-header-top@^6.0.0-alpha.9:
-  version "6.0.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-header-top/-/gatsby-theme-catalyst-header-top-6.0.0-alpha.9.tgz#317a287daf1f7e56407172a987ac624feb0bf1f1"
-  integrity sha512-WJygyBrB5s8TaxsRHwnQ0mL3o0Ptwwroe+ayLPbnAHNNWFB/zZ5uEMxEFG5GOAsPm/50tkUDQQLou23rzFnDwg==
+gatsby-theme-catalyst-header-top@^6.0.0-alpha.10:
+  version "6.0.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-header-top/-/gatsby-theme-catalyst-header-top-6.0.0-alpha.10.tgz#4503f320d941a8f225c2561e68569a898f1795a6"
+  integrity sha512-EMvgYgBAzxFxERLs4AJhYwR1iilg23O/YKbcz9wiS1LorrlSsrIXGIYumbwqipyGd6UTzOAoENdBiBVFVJAV5Q==
 
-gatsby-theme-catalyst-hydrogen@^6.0.0-alpha.9:
-  version "6.0.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-hydrogen/-/gatsby-theme-catalyst-hydrogen-6.0.0-alpha.9.tgz#15126315bb03b5a9518b47378b43af7a23d2e6d3"
-  integrity sha512-khivK9rme9+uqQ6Q2cf40lOFtXygOQ0+dMnGfuXgTTWYAX7dAx9Rw3yAcyFzDrw8pj1ZE2Y+dfAKMBEV2duvww==
+gatsby-theme-catalyst-hydrogen@^6.0.0-alpha.10:
+  version "6.0.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-hydrogen/-/gatsby-theme-catalyst-hydrogen-6.0.0-alpha.10.tgz#6abb9e8750a8c97ec9402dcd3d282308c5ca9465"
+  integrity sha512-0wLZ5o/BQYZ2YGU6lWXL3mZHerBT95h+abrY30gaoVAuFYq1d8T9RqM2EPVUXmt9pWz1FrrfE8L2LRHJ5TDiVw==
   dependencies:
-    gatsby-theme-catalyst-core "^6.0.0-alpha.9"
-    gatsby-theme-catalyst-footer "^6.0.0-alpha.9"
-    gatsby-theme-catalyst-header-top "^6.0.0-alpha.9"
-    gatsby-theme-catalyst-sanity "^6.0.0-alpha.9"
+    gatsby-theme-catalyst-core "^6.0.0-alpha.10"
+    gatsby-theme-catalyst-footer "^6.0.0-alpha.10"
+    gatsby-theme-catalyst-header-top "^6.0.0-alpha.10"
+    gatsby-theme-catalyst-sanity "^6.0.0-alpha.10"
 
-gatsby-theme-catalyst-sanity@^6.0.0-alpha.9:
-  version "6.0.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-sanity/-/gatsby-theme-catalyst-sanity-6.0.0-alpha.9.tgz#955b320a8e6cceebad134ade31577b010e54d6cb"
-  integrity sha512-4t5rU33W9X2x7cgrpDOcYUPf+eOf4MLfHlkELAPIm3hso2FNgUooOIn46jCIwUHxFDULQmj5HirPAzCbAFy0tg==
+gatsby-theme-catalyst-sanity@^6.0.0-alpha.10:
+  version "6.0.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-sanity/-/gatsby-theme-catalyst-sanity-6.0.0-alpha.10.tgz#a76187922be7380504f947feff31f430bbff03b2"
+  integrity sha512-7iz78xlzNSH5tGz0SXM7ctb/F/BzMXk0H1u1fKVBD6csSoY/0ALszo8wHuviRMeWx4qXU53Q0Is7vA+ytIGbiQ==
   dependencies:
     "@sanity/block-content-to-react" "^2.0.7"
     gatsby-source-sanity "^7.0.0"
