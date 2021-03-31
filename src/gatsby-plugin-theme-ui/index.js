@@ -3,7 +3,7 @@
 import { tailwind, baseColors } from "@theme-ui/preset-tailwind"
 import "typeface-playfair-display"
 
-export default {
+const theme = {
   ...tailwind,
   breakpoints: ["480px", "768px", "1024px", "1440px"],
   fonts: {
@@ -209,3 +209,5 @@ export default {
     },
   },
 }
+
+export default theme
