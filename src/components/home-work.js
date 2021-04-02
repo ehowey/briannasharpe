@@ -5,6 +5,8 @@ import { Fragment } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Card from "gatsby-theme-catalyst-hydrogen/src/components/home-page/home-card"
 import ButtonSecondary from "gatsby-theme-catalyst-hydrogen/src/components/button-secondary"
+import { getGatsbyImageData } from "gatsby-source-sanity"
+import { useSanityConfig } from "gatsby-theme-catalyst-sanity"
 
 const FeaturedWork = () => {
   const data = useStaticQuery(graphql`
@@ -30,17 +32,14 @@ const FeaturedWork = () => {
           excerpt
           image {
             asset {
-              gatsbyImageData(
-                width: 900
-                layout: CONSTRAINED
-                placeholder: BLURRED
-              )
+              id
             }
           }
         }
       }
     }
   `)
+  const { sanityConfig } = useSanityConfig()
   const writing = data.allSanityWork.nodes
   const result = data.sanityHomePage
   return (
@@ -79,17 +78,24 @@ const FeaturedWork = () => {
             gridRow: "1 / -1",
           }}
         >
-          {writing.map((published) => (
-            <Card
-              title={published.title}
-              link={published.link}
-              image={published.image.asset.gatsbyImageData}
-              publisher={published.publisher}
-              date={published.date}
-              excerpt={published.excerpt}
-              key={published.id}
-            />
-          ))}
+          {writing.map((published) => {
+            const writingImage = getGatsbyImageData(
+              published.image.asset.id,
+              { maxWidth: 200 },
+              sanityConfig
+            )
+            return (
+              <Card
+                title={published.title}
+                link={published.link}
+                image={writingImage}
+                publisher={published.publisher}
+                date={published.date}
+                excerpt={published.excerpt}
+                key={published.id}
+              />
+            )
+          })}
           <div
             sx={{
               display: "grid",

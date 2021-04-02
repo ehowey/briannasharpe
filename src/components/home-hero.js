@@ -4,7 +4,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import ButtonPrimary from "gatsby-theme-catalyst-hydrogen/src/components/button-primary"
 import ButtonSecondary from "gatsby-theme-catalyst-hydrogen/src/components/button-secondary"
-import { SanityContent } from "gatsby-theme-catalyst-sanity"
+import { SanityContent, useSanityConfig } from "gatsby-theme-catalyst-sanity"
+import { getGatsbyImageData } from "gatsby-source-sanity"
 
 const SiteWelcome = () => {
   const data = useStaticQuery(graphql`
@@ -14,16 +15,14 @@ const SiteWelcome = () => {
         _rawHeroText
         heroImage {
           asset {
-            gatsbyImageData(
-              width: 1024
-              layout: CONSTRAINED
-              placeholder: BLURRED
-            )
+            id
           }
         }
       }
     }
   `)
+
+  const { sanityConfig } = useSanityConfig()
 
   const welcomeHeight = () => {
     if (
@@ -37,8 +36,12 @@ const SiteWelcome = () => {
     }
   }
 
-  const heroImage = data.sanityHomePage.heroImage.asset.gatsbyImageData
   const hero = data.sanityHomePage
+  const heroImage = getGatsbyImageData(
+    data.sanityHomePage.heroImage.asset.id,
+    { maxWidth: 1440 },
+    sanityConfig
+  )
 
   return (
     <section
