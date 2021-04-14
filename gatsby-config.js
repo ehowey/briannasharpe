@@ -40,11 +40,6 @@ module.exports = {
     ],
     socialLinks: [
       {
-        name: `Email`,
-        link: `sharpe.brianna@gmail.com`,
-        location: `footer`, //Options are "all", "header", "footer"
-      },
-      {
         name: `Twitter`,
         link: `https://www.twitter.com/sharpe_bri`,
         location: `all`, //Options are "all", "header", "footer"
