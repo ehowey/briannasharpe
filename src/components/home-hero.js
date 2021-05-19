@@ -15,7 +15,11 @@ const SiteWelcome = () => {
         _rawHeroText
         heroImage {
           asset {
-            id
+            gatsbyImageData(
+              width: 900
+              layout: CONSTRAINED
+              placeholder: BLURRED
+            )
           }
         }
       }
@@ -37,11 +41,7 @@ const SiteWelcome = () => {
   }
 
   const hero = data.sanityHomePage
-  const heroImage = getGatsbyImageData(
-    data.sanityHomePage.heroImage.asset.id,
-    { maxWidth: 1440 },
-    sanityConfig
-  )
+  const heroImage = data.sanityHomePage.heroImage.asset.gatsbyImageData
 
   return (
     <section

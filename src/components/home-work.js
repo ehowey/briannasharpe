@@ -5,7 +5,6 @@ import { Fragment } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Card from "gatsby-theme-catalyst-hydrogen/src/components/home-page/home-card"
 import ButtonSecondary from "gatsby-theme-catalyst-hydrogen/src/components/button-secondary"
-import { getGatsbyImageData } from "gatsby-source-sanity"
 import { useSanityConfig } from "gatsby-theme-catalyst-sanity"
 
 const FeaturedWork = () => {
@@ -32,7 +31,11 @@ const FeaturedWork = () => {
           excerpt
           image {
             asset {
-              id
+              gatsbyImageData(
+                width: 400
+                layout: CONSTRAINED
+                placeholder: BLURRED
+              )
             }
           }
         }
@@ -79,11 +82,7 @@ const FeaturedWork = () => {
           }}
         >
           {writing.map((published) => {
-            const writingImage = getGatsbyImageData(
-              published.image.asset.id,
-              { maxWidth: 200 },
-              sanityConfig
-            )
+            const writingImage = published.image.asset.gatsbyImageData
             return (
               <Card
                 title={published.title}

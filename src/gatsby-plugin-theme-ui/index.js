@@ -42,13 +42,20 @@ const theme = {
     iconsHeader: "20px", // Sets the icons size for the header
   },
   styles: {
-    ...tailwind.styles,
     root: {
       backgroundColor: "background",
       color: "text",
       fontFamily: "body",
       fontWeight: "body",
       lineHeight: "body",
+    },
+    p: {
+      fontSize: 2,
+    },
+    ul: {
+      fontSize: 2,
+    },
+    ol: {
       fontSize: 2,
     },
     a: {
