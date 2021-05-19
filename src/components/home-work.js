@@ -5,7 +5,6 @@ import { Fragment } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Card from "gatsby-theme-catalyst-hydrogen/src/components/home-page/home-card"
 import ButtonSecondary from "gatsby-theme-catalyst-hydrogen/src/components/button-secondary"
-import { useSanityConfig } from "gatsby-theme-catalyst-sanity"
 
 const FeaturedWork = () => {
   const data = useStaticQuery(graphql`
@@ -42,7 +41,6 @@ const FeaturedWork = () => {
       }
     }
   `)
-  const { sanityConfig } = useSanityConfig()
   const writing = data.allSanityWork.nodes
   const result = data.sanityHomePage
   return (

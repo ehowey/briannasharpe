@@ -18,6 +18,7 @@ const theme = {
     muted: "#FFF2FC",
     text: baseColors.gray[8],
     textWhite: baseColors.gray[1],
+    textGray: baseColors.gray[7],
     header: {
       background: "transparent",
       backgroundOpen: "#3e5a70",
@@ -37,11 +38,12 @@ const theme = {
   sizes: {
     ...tailwind.sizes,
     maxPageWidth: "1440px", // Sets the max width of elements like the header/footer on really large screens
-    maxContentWidth: "60ch", // Sets the container size on larger screens, e.g. tablets and laptops
+    maxContentWidth: "720px", // Sets the container size on larger screens, e.g. tablets and laptops
     iconsFooter: "32px", // Sets the icons size for the footer
     iconsHeader: "20px", // Sets the icons size for the header
   },
   styles: {
+    ...tailwind.styles,
     root: {
       backgroundColor: "background",
       color: "text",

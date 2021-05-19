@@ -4,8 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import ButtonPrimary from "gatsby-theme-catalyst-hydrogen/src/components/button-primary"
 import ButtonSecondary from "gatsby-theme-catalyst-hydrogen/src/components/button-secondary"
-import { SanityContent, useSanityConfig } from "gatsby-theme-catalyst-sanity"
-import { getGatsbyImageData } from "gatsby-source-sanity"
+import { SanityContent } from "gatsby-theme-catalyst-sanity"
 
 const SiteWelcome = () => {
   const data = useStaticQuery(graphql`
@@ -25,8 +24,6 @@ const SiteWelcome = () => {
       }
     }
   `)
-
-  const { sanityConfig } = useSanityConfig()
 
   const welcomeHeight = () => {
     if (
