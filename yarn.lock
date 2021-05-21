@@ -6983,10 +6983,10 @@ gatsby-telemetry@^2.5.0:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-gatsby-theme-catalyst-core@^6.0.0-beta.13:
-  version "6.0.0-beta.13"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-core/-/gatsby-theme-catalyst-core-6.0.0-beta.13.tgz#996b6454bb75d72071d1efde652efb64709b1bc0"
-  integrity sha512-XSg5Cd4II+XUColmpWVeZXxgMvLbSKTA35FpvadkTdqiIKk//YY77bp8pBFLPwwEn4Yh318S38ntHpERGzF6xw==
+gatsby-theme-catalyst-core@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-core/-/gatsby-theme-catalyst-core-6.0.0.tgz#d01cdd02f01606cbb763dc965d0f53b0c3a8aef9"
+  integrity sha512-u27bJTfBIAi4Wg49Of/SjzOT2kQBtP7fQeIV+rkHc7kQsF3fr5AV5UgU5m6jzgM9KrpQbZXePXXK3S/F4Y6iIw==
   dependencies:
     "@mdx-js/mdx" "^1.6.22"
     "@mdx-js/react" "^1.6.22"
@@ -7027,30 +7027,30 @@ gatsby-theme-catalyst-core@^6.0.0-beta.13:
     remark-slug "^6.0.0"
     theme-ui "^0.8.4"
 
-gatsby-theme-catalyst-footer@^6.0.0-beta.13:
-  version "6.0.0-beta.13"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-footer/-/gatsby-theme-catalyst-footer-6.0.0-beta.13.tgz#066b4aa18cd356af97a14d4cee7c3c12354e35d8"
-  integrity sha512-fTip6Tj3/rxh1F7EnSQDpIIo/nL493ALIaNv1D6kBRl2d00KA+GQy6ZnuhucMCy/mGRmppFbNgJ6yt4tqVYM2w==
+gatsby-theme-catalyst-footer@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-footer/-/gatsby-theme-catalyst-footer-6.0.0.tgz#545bb4175a95cc420ad9156a443612c2476ea9f7"
+  integrity sha512-drgVm1KAkJWnwE4iO7F1Dy01kd6+Px4GMh4H0oz+PTf6FHXEbPBld16q6sWxLDilXe/KIdgwiKXeFwrCNhBe6A==
 
-gatsby-theme-catalyst-header-top@^6.0.0-beta.13:
-  version "6.0.0-beta.13"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-header-top/-/gatsby-theme-catalyst-header-top-6.0.0-beta.13.tgz#e50d488876ef8cbe9a50ba73910c112be675d9cd"
-  integrity sha512-XalPQ2uXrz73+0RfhC2SjRXEJ2aSr5ypOggAgulUlNIlMJr6apStBPSrhpMTd6OHUwWKLAeb554w/OUalCfqoQ==
+gatsby-theme-catalyst-header-top@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-header-top/-/gatsby-theme-catalyst-header-top-6.0.0.tgz#9e6573d3e56ff0fa66466372f607acb94b4dd015"
+  integrity sha512-U92a7NFF/cYJewuodSyU4SUB8pySdAFvi+DDqTq6Nozqnwoaav8Ib92ddaZQJ+1s8njbi1IC2tgen5iC2xfPzA==
 
-gatsby-theme-catalyst-hydrogen@^6.0.0-beta.13:
-  version "6.0.0-beta.13"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-hydrogen/-/gatsby-theme-catalyst-hydrogen-6.0.0-beta.13.tgz#a5400c13c871eb0f605cef7199e6c9ee8b7be9dc"
-  integrity sha512-GBfOH2eZ/px0PVRKkpf7U8l6EeaB2qy/k2DGqNAClIRnXRVifTU8SnVu7+cI7JB8hLRguUcqGdJGsPwXVt6dcg==
+gatsby-theme-catalyst-hydrogen@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-hydrogen/-/gatsby-theme-catalyst-hydrogen-6.0.0.tgz#a0c46906a0e620757de0671c575bd2710f9369ea"
+  integrity sha512-DA+eWBfGQS1GwVw7XJ7nIm8TWbKUPDyOIDQxmTL5n/oMLfqcm05eQTb6vH3b70zdxKbJwcuP4kiic1jMhgJxIQ==
   dependencies:
-    gatsby-theme-catalyst-core "^6.0.0-beta.13"
-    gatsby-theme-catalyst-footer "^6.0.0-beta.13"
-    gatsby-theme-catalyst-header-top "^6.0.0-beta.13"
-    gatsby-theme-catalyst-sanity "^6.0.0-beta.13"
+    gatsby-theme-catalyst-core "^6.0.0"
+    gatsby-theme-catalyst-footer "^6.0.0"
+    gatsby-theme-catalyst-header-top "^6.0.0"
+    gatsby-theme-catalyst-sanity "^6.0.0"
 
-gatsby-theme-catalyst-sanity@^6.0.0-beta.13:
-  version "6.0.0-beta.13"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-sanity/-/gatsby-theme-catalyst-sanity-6.0.0-beta.13.tgz#8a23c0eba0e74a2061ffc3f04d580f4de582e963"
-  integrity sha512-tKtgtTD/x0eWZcKKwfweSgcjFwSbfe2o6ZWHqPmN9GoAPICqIPaMNO9W+P02X9iiDtPd84Qb8TSRY9rzU4Rrbg==
+gatsby-theme-catalyst-sanity@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-catalyst-sanity/-/gatsby-theme-catalyst-sanity-6.0.0.tgz#56449ea70b151cc0b0a59aa79b83682fe2130d2b"
+  integrity sha512-R/ttERBmMPXfUNNwS+oDsFIhrsKITljqf1jXrJyb8YrA5tmcGj4w3jEid7zPNk39UXiG1fbmtRuT4NqjIjIC+A==
   dependencies:
     "@sanity/block-content-to-react" "^3.0.0"
     gatsby-source-sanity "^7.0.4"
